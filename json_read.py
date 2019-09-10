@@ -16,7 +16,7 @@ response = """{
                 "uniqueId":1,
                 "address": {
                         "streetNum":"535",
-                        "streetName": "THE EAST MALL"                  }
+                        "streetName": "THE EAST MALL"                  },
                 "lastUpdate" : {
                     "userId" : "wcom_user"              }
               }
