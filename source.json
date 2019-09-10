@@ -1,0 +1,24 @@
+{
+  "agreement": [
+    {
+      "usageCD": null,
+      "relationshipID": null,
+      "account": {
+        "bookOfBusinessCD": "RM03",
+        "accountTypeCd": "TFSA"
+      }
+    }
+  ],
+  "streetAddressess": [
+    {
+      "uniqueId": 1,
+      "address": {
+        "streetNum": "535",
+        "streetName": "THEEASTMALL"
+      },
+      "lastUpdate": {
+        "userId": "wcom_user"
+      }
+    }
+  ]
+}
