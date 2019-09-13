@@ -2,9 +2,11 @@ import json
 import pyodbc
 from datetime import datetime
 
-# datetime object containing current date and time
+#  datetime object containing current date and time
 now = datetime.now()
 
+
+# connection creation to SQL Server
 conn = pyodbc.connect(
     "Driver={SQL Server Native Client 11.0};"
     "Server=LAPTOP-21RC5VEQ;"
@@ -12,6 +14,8 @@ conn = pyodbc.connect(
     "Trusted_Connection=yes;"
 )
 
+
+# create raw data
 def create(conn,ls):
     print("Create")
     cnt = 0
@@ -25,22 +29,22 @@ def create(conn,ls):
     conn.commit()
 
 
-
+# creation of leaf records
 def break_down_leaf(conn):
     print("Create Child Records")
     cnt = 0
     split_leaf_list = []
     split_leaf =[]
     cur_read = conn.cursor()
-    # cur_ins = conn1.cursor()
+    #  cur_ins = conn1.cursor()
     cur_read.execute("select item_no , item_name , item_value  from dbo.json_flatten_raw;")
     for row in cur_read:
         split_leaf_list.append(row)
 
     for inner_row in split_leaf_list:
-        # print(row[0],row[1],row[2])
+        #  print(row[0],row[1],row[2])
         split_leaf = inner_row[1].split(".")
-        # print(split_leaf)
+        #  print(split_leaf)
         for child_rec in split_leaf:
             cnt += 1
             cur_read.execute("insert into dbo.json_flatten(item_no,item_name,parent_item_no,insert_date) values (?,?,?,?);",
@@ -50,19 +54,13 @@ def break_down_leaf(conn):
     conn.commit()
 
 
+# read json source file
 with open("source.json", "r") as rj:
     response = rj.read()
-
 res = json.loads(response)
 
 
-# print(res)
-
-# for doc in res:
-#     print(doc)
-#     for inner in res[doc]:
-#         print(inner)
-
+# read json file into records
 
 def flattenDict(d, result=None, index=None, Key=None):
     if result is None:
@@ -86,13 +84,21 @@ def flattenDict(d, result=None, index=None, Key=None):
         result[Key] = d
     return result
 
+
 raw_list =[]
 
+
+# create list of records from json
 for i in flattenDict(res).items():
-    print(i)
     raw_list.append(i)
 
+
+# call function of raw rec creation
+
+
 create(conn,raw_list)
+
+# call function of child rec creation
 
 break_down_leaf(conn)
 
