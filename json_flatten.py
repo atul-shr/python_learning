@@ -48,7 +48,7 @@ def break_down_leaf(conn):
         for child_rec in split_leaf:
             cnt += 1
             cur_read.execute("insert into dbo.json_flatten(item_no,item_name,parent_item_no) values (?,?,?);",
-                        (cnt, child_rec, inner_row[0])
+                        (cnt, bytes(str(child_rec),'utf-8'), inner_row[0])
                         )
         cnt = 0
     conn.commit()
