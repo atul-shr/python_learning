@@ -23,8 +23,8 @@ def create_raw(conn,ls):
     cur.execute("delete from dbo.json_flatten_raw;")
     for rec in ls:
         cnt += 1
-        cur.execute("insert into dbo.json_flatten_raw(item_no,item_name,item_value,insert_date) values (?,?,?,?);",
-                    (cnt,bytes(rec[0],'utf-8'),bytes(rec[1],'utf-8'),now)
+        cur.execute("insert into dbo.json_flatten_raw(item_no,item_name,item_value) values (?,?,?);",
+                    (cnt,bytes(str(rec[0]),'utf-8'),bytes(str(rec[1]),'utf-8'))
                     )
     conn.commit()
 
