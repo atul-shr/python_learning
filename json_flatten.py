@@ -16,7 +16,7 @@ conn = pyodbc.connect(
 
 
 # create raw data
-def create(conn,ls):
+def create_raw(conn,ls):
     print("Create")
     cnt = 0
     cur = conn.cursor()
@@ -24,7 +24,7 @@ def create(conn,ls):
     for rec in ls:
         cnt += 1
         cur.execute("insert into dbo.json_flatten_raw(item_no,item_name,item_value,insert_date) values (?,?,?,?);",
-                    (cnt,rec[0],rec[1],now)
+                    (cnt,bytes(rec[0],'utf-8'),bytes(rec[1],'utf-8'),now)
                     )
     conn.commit()
 
@@ -47,8 +47,8 @@ def break_down_leaf(conn):
         #  print(split_leaf)
         for child_rec in split_leaf:
             cnt += 1
-            cur_read.execute("insert into dbo.json_flatten(item_no,item_name,parent_item_no,insert_date) values (?,?,?,?);",
-                        (cnt, child_rec, inner_row[0],now)
+            cur_read.execute("insert into dbo.json_flatten(item_no,item_name,parent_item_no) values (?,?,?);",
+                        (cnt, child_rec, inner_row[0])
                         )
         cnt = 0
     conn.commit()
@@ -96,7 +96,7 @@ for i in flattenDict(res).items():
 # call function of raw rec creation
 
 
-create(conn,raw_list)
+create_raw(conn,raw_list)
 
 # call function of child rec creation
 
