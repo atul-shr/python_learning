@@ -22,3 +22,2091 @@
     }
   ]
 }
+{
+	"agreements": [
+		{
+			"usageCd": null,
+			"relationshipId": null,
+			"account": {
+				"bookOfBusinessCd": "RM01",
+				"borKeyVal": null,
+				"accountId": null,
+				"statusCd": null,
+				"accountTypeCd": "CASH",
+				"lobCd": null,
+				"securityCommunicationCd": "RECEIVE_ALL",
+				"securityPrivacyInd": true,
+				"accountNum": "09M207A",
+				"currencyCd": "CAD",
+				"optionsTradingInd": false,
+				"newClientIdReservedInd": true,
+				"newClientId": "09M207"
+			}
+		},
+		{
+			"usageCd": null,
+			"relationshipId": null,
+			"account": {
+				"bookOfBusinessCd": "RM01",
+				"borKeyVal": null,
+				"accountId": null,
+				"statusCd": null,
+				"accountTypeCd": "CASH",
+				"lobCd": null,
+				"securityCommunicationCd": "RECEIVE_ALL",
+				"securityPrivacyInd": true,
+				"accountNum": "09M207B",
+				"currencyCd": "USD",
+				"optionsTradingInd": false,
+				"newClientIdReservedInd": true,
+				"newClientId": "09M207"
+				
+			}
+		},
+		
+		
+		
+		
+		{
+			"usageCd": null,
+			"relationshipId": null,
+			"account": {
+				"bookOfBusinessCd": "RM01",
+				"borKeyVal": null,
+				"accountId": null,
+				"statusCd": null,
+				"accountTypeCd": "CASH",
+				"lobCd": null,
+				"securityCommunicationCd": "RECEIVE_ALL",
+				"securityPrivacyInd": true,
+				"accountNum": "09M211A",
+				"currencyCd": "CAD",
+				"optionsTradingInd": false,
+				"newClientIdReservedInd": true,
+				"newClientId": "09M211",
+				"accMinorClsCd": "INFORMAL TRUST"
+			}
+		},
+		{
+			"usageCd": null,
+			"relationshipId": null,
+			"account": {
+				"bookOfBusinessCd": "RM01",
+				"borKeyVal": null,
+				"accountId": null,
+				"statusCd": null,
+				"accountTypeCd": "CASH",
+				"lobCd": null,
+				"securityCommunicationCd": "RECEIVE_ALL",
+				"securityPrivacyInd": true,
+				"accountNum": "09M211B",
+				"currencyCd": "USD",
+				"optionsTradingInd": false,
+				"newClientIdReservedInd": true,
+				"newClientId": "09M211",
+				"accMinorClsCd": "INFORMAL TRUST"
+			}
+		},
+		
+		{
+			"usageCd": null,
+			"relationshipId": null,
+			"account": {
+				"bookOfBusinessCd": "RM03",
+				"borKeyVal": null,
+				"accountId": null,
+				"statusCd": null,
+				"accountTypeCd": "RESP",
+				"lobCd": null,
+				"securityCommunicationCd": "RECEIVE_ALL",
+				"securityPrivacyInd": true,
+				"accountNum": "09M206V",
+				"currencyCd": "CAD",
+				"optionsTradingInd": true,
+				"newClientIdReservedInd": true,
+				"newClientId": "09M206"
+			
+			}
+		}
+
+
+
+	],
+	"streetAddresses": [{
+			"uniqueId": 1,
+			"relationshipId": null,
+			"usageCd": "CUSTOMER_MAILING",
+			"address": {
+				"addressId": null,
+				"startDttm": "2017-06-26",
+				"endDttm": null,
+				"unitNum": null,
+				"unitTypeCd": null,
+				"streetNum": "631",
+				"streetName": "Kylemore Dr",
+				"streetOrientationTxt": null,
+				"streetTypeCd": null,
+				"streetDirectionCd": null,
+				"streetSuffixCd": null,
+				"cityName": "Des Plaines",
+				"postalCode": "60016",
+				"territoryCd": "IL",
+				"countryCd": "US",
+				"ruralRouteNum": null,
+				"ruralRouteTypeCd": null,
+				"poBox": null,
+				"postalStationTxt": null
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937171,
+				"hash": "ff520fc1e0d522e67e07ceb0a53a7d877761b25a5ceff6e95ae3a04863badc4a"
+			}
+		},
+		{
+			"uniqueId": 1,
+			"relationshipId": null,
+			"usageCd": "PRIMARY_RESIDENCE",
+			"address": {
+				"addressId": null,
+				"startDttm": "2017-06-26",
+				"endDttm": null,
+				"unitNum": null,
+				"unitTypeCd": null,
+				"streetNum": "631",
+				"streetName": "Kylemore Dr",
+				"streetOrientationTxt": null,
+				"streetTypeCd": null,
+				"streetDirectionCd": null,
+				"streetSuffixCd": null,
+				"cityName": "Des Plaines",
+				"postalCode": "60016",
+				"territoryCd": "IL",
+				"countryCd": "US",
+				"ruralRouteNum": null,
+				"ruralRouteTypeCd": null,
+				"poBox": null,
+				"postalStationTxt": null
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937171,
+				"hash": "ff520fc1e0d522e67e07ceb0a53a7d877761b25a5ceff6e95ae3a04863badc4a"
+			}
+		},
+		{
+			"uniqueId": 2,
+			"relationshipId": null,
+			"statementInd": true,
+			"tradeConfirmationInd": false,
+			"usageCd": "CUSTOMER_MAILING",
+			"address": {
+				"addressId": null,
+				"startDttm": "2017-06-26",
+				"endDttm": null,
+				"unitNum": null,
+				"unitTypeCd": null,
+				"streetNum": "632",
+				"streetName": "Kylemore Dr",
+				"streetOrientationTxt": null,
+				"streetTypeCd": null,
+				"streetDirectionCd": null,
+				"streetSuffixCd": null,
+				"cityName": "Des Plaines",
+				"postalCode": "60016",
+				"territoryCd": "IL",
+				"countryCd": "US",
+				"ruralRouteNum": null,
+				"ruralRouteTypeCd": null,
+				"poBox": null,
+				"postalStationTxt": null
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937171,
+				"hash": "ff520fc1e0d522e67e07ceb0a53a7d877761b25a5ceff6e95ae3a04863badc4a"
+			}
+		},
+		{
+			"uniqueId": 2,
+			"relationshipId": null,
+			"usageCd": "PRIMARY_RESIDENCE",
+			"address": {
+				"addressId": null,
+				"startDttm": "2017-06-26",
+				"endDttm": null,
+				"unitNum": null,
+				"unitTypeCd": null,
+				"streetNum": "632",
+				"streetName": "Kylemore Dr",
+				"streetOrientationTxt": null,
+				"streetTypeCd": null,
+				"streetDirectionCd": null,
+				"streetSuffixCd": null,
+				"cityName": "Des Plaines",
+				"postalCode": "60016",
+				"territoryCd": "IL",
+				"countryCd": "US",
+				"ruralRouteNum": null,
+				"ruralRouteTypeCd": null,
+				"poBox": null,
+				"postalStationTxt": null
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937171,
+				"hash": "ff520fc1e0d522e67e07ceb0a53a7d877761b25a5ceff6e95ae3a04863badc4a"
+			}
+		},
+		{
+			"uniqueId": 3,
+			"relationshipId": null,
+			"statementInd": true,
+			"tradeConfirmationInd": false,
+			"usageCd": "CUSTOMER_MAILING",
+			"address": {
+				"addressId": null,
+				"startDttm": "2017-06-26",
+				"endDttm": null,
+				"unitNum": null,
+				"unitTypeCd": null,
+				"streetNum": "633",
+				"streetName": "Kylemore Dr",
+				"streetOrientationTxt": null,
+				"streetTypeCd": null,
+				"streetDirectionCd": null,
+				"streetSuffixCd": null,
+				"cityName": "Des Plaines",
+				"postalCode": "60016",
+				"territoryCd": "IL",
+				"countryCd": "US",
+				"ruralRouteNum": null,
+				"ruralRouteTypeCd": null,
+				"poBox": null,
+				"postalStationTxt": null
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937171,
+				"hash": "ff520fc1e0d522e67e07ceb0a53a7d877761b25a5ceff6e95ae3a04863badc4a"
+			}
+		},
+		{
+			"uniqueId": 3,
+			"relationshipId": null,
+			"usageCd": "PRIMARY_RESIDENCE",
+			"address": {
+				"addressId": null,
+				"startDttm": "2017-06-26",
+				"endDttm": null,
+				"unitNum": null,
+				"unitTypeCd": null,
+				"streetNum": "633",
+				"streetName": "Kylemore Dr",
+				"streetOrientationTxt": null,
+				"streetTypeCd": null,
+				"streetDirectionCd": null,
+				"streetSuffixCd": null,
+				"cityName": "Des Plaines",
+				"postalCode": "60016",
+				"territoryCd": "IL",
+				"countryCd": "US",
+				"ruralRouteNum": null,
+				"ruralRouteTypeCd": null,
+				"poBox": null,
+				"postalStationTxt": null
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937171,
+				"hash": "ff520fc1e0d522e67e07ceb0a53a7d877761b25a5ceff6e95ae3a04863badc4a"
+			}
+		},
+		{
+			"uniqueId": 4,
+			"relationshipId": null,
+			"statementInd": true,
+			"tradeConfirmationInd": false,
+			"usageCd": "CUSTOMER_MAILING",
+			"address": {
+				"addressId": null,
+				"startDttm": "2017-06-26",
+				"endDttm": null,
+				"unitNum": null,
+				"unitTypeCd": null,
+				"streetNum": "634",
+				"streetName": "Kylemore Dr",
+				"streetOrientationTxt": null,
+				"streetTypeCd": null,
+				"streetDirectionCd": null,
+				"streetSuffixCd": null,
+				"cityName": "Des Plaines",
+				"postalCode": "60016",
+				"territoryCd": "IL",
+				"countryCd": "US",
+				"ruralRouteNum": null,
+				"ruralRouteTypeCd": null,
+				"poBox": null,
+				"postalStationTxt": null
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937171,
+				"hash": "ff520fc1e0d522e67e07ceb0a53a7d877761b25a5ceff6e95ae3a04863badc4a"
+			}
+		},
+		{
+			"uniqueId": 4,
+			"relationshipId": null,
+			"usageCd": "PRIMARY_RESIDENCE",
+			"address": {
+				"addressId": null,
+				"startDttm": "2017-06-26",
+				"endDttm": null,
+				"unitNum": null,
+				"unitTypeCd": null,
+				"streetNum": "634",
+				"streetName": "Kylemore Dr",
+				"streetOrientationTxt": null,
+				"streetTypeCd": null,
+				"streetDirectionCd": null,
+				"streetSuffixCd": null,
+				"cityName": "Des Plaines",
+				"postalCode": "60016",
+				"territoryCd": "IL",
+				"countryCd": "US",
+				"ruralRouteNum": null,
+				"ruralRouteTypeCd": null,
+				"poBox": null,
+				"postalStationTxt": null
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937171,
+				"hash": "ff520fc1e0d522e67e07ceb0a53a7d877761b25a5ceff6e95ae3a04863badc4a"
+			}
+		},
+		{
+			"uniqueId": 5,
+			"relationshipId": null,
+			"statementInd": true,
+			"tradeConfirmationInd": false,
+			"usageCd": "CUSTOMER_MAILING",
+			"address": {
+				"addressId": null,
+				"startDttm": "2017-06-26",
+				"endDttm": null,
+				"unitNum": null,
+				"unitTypeCd": null,
+				"streetNum": "635",
+				"streetName": "Kylemore Dr",
+				"streetOrientationTxt": null,
+				"streetTypeCd": null,
+				"streetDirectionCd": null,
+				"streetSuffixCd": null,
+				"cityName": "Des Plaines",
+				"postalCode": "60016",
+				"territoryCd": "IL",
+				"countryCd": "US",
+				"ruralRouteNum": null,
+				"ruralRouteTypeCd": null,
+				"poBox": null,
+				"postalStationTxt": null
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937171,
+				"hash": "ff520fc1e0d522e67e07ceb0a53a7d877761b25a5ceff6e95ae3a04863badc4a"
+			}
+		},
+		{
+			"uniqueId": 5,
+			"relationshipId": null,
+			"usageCd": "PRIMARY_RESIDENCE",
+			"address": {
+				"addressId": null,
+				"startDttm": "2017-06-26",
+				"endDttm": null,
+				"unitNum": null,
+				"unitTypeCd": null,
+				"streetNum": "635",
+				"streetName": "Kylemore Dr",
+				"streetOrientationTxt": null,
+				"streetTypeCd": null,
+				"streetDirectionCd": null,
+				"streetSuffixCd": null,
+				"cityName": "Des Plaines",
+				"postalCode": "60016",
+				"territoryCd": "IL",
+				"countryCd": "US",
+				"ruralRouteNum": null,
+				"ruralRouteTypeCd": null,
+				"poBox": null,
+				"postalStationTxt": null
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937171,
+				"hash": "ff520fc1e0d522e67e07ceb0a53a7d877761b25a5ceff6e95ae3a04863badc4a"
+			}
+		}
+	],
+	"emailAddresses": [{
+			"uniqueId": 1,
+			"relationshipId": null,
+			"usageCd": "PERSONAL_EMAIL",
+			"emailTxt": "puru@td.ca",
+			"email": {
+				"startDttm": null,
+				"endDttm": null
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290832035,
+				"hash": "c5f024fa45703e77e46cf288726289c56443a35c0bbf01fd9484bd264a4afe78"
+			}
+		},
+		{
+			"uniqueId": 2,
+			"relationshipId": null,
+			"usageCd": "PERSONAL_EMAIL",
+			"emailTxt": "bab@td.ca",
+			"email": {
+				"startDttm": null,
+				"endDttm": null
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290832035,
+				"hash": "c5f024fa45703e77e46cf288726289c56443a35c0bbf01fd9484bd264a4afe78"
+			}
+		},
+		{
+			"uniqueId": 3,
+			"relationshipId": null,
+			"usageCd": "PERSONAL_EMAIL",
+			"emailTxt": "nav@td.ca",
+			"email": {
+				"startDttm": null,
+				"endDttm": null
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290832035,
+				"hash": "c5f024fa45703e77e46cf288726289c56443a35c0bbf01fd9484bd264a4afe78"
+			}
+		},
+		{
+			"uniqueId": 4,
+			"relationshipId": null,
+			"usageCd": "PERSONAL_EMAIL",
+			"emailTxt": "jas@td.ca",
+			"email": {
+				"startDttm": null,
+				"endDttm": null
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290832035,
+				"hash": "c5f024fa45703e77e46cf288726289c56443a35c0bbf01fd9484bd264a4afe78"
+			}
+		}
+	],
+	"telephoneAddresses": [{
+		"uniqueId": 1,
+		"relationshipId": null,
+		"usageCd": "MOBILE",
+		"telephone": {
+			"startDttm": null,
+			"endDttm": null,
+			"localNum": "5180491",
+			"countryCodeNum": 1,
+			"areaCodeNum": "647",
+			"extensionNum": null
+		},
+		"lastUpdate": {
+			"userId": "wcom_user",
+			"userTypeCd": "System",
+			"asOfDttm": 1502290832034,
+			"hash": "dcf19ee89399d42d77c0eec73290ad3ca0e58ee431e1d1ae66bce7c0b7e37054"
+		}
+	},
+	{
+		"uniqueId": 2,
+		"relationshipId": null,
+		"usageCd": "MOBILE",
+		"telephone": {
+			"startDttm": null,
+			"endDttm": null,
+			"localNum": "5180492",
+			"countryCodeNum": 1,
+			"areaCodeNum": "647",
+			"extensionNum": null
+		},
+		"lastUpdate": {
+			"userId": "wcom_user",
+			"userTypeCd": "System",
+			"asOfDttm": 1502290832034,
+			"hash": "dcf19ee89399d42d77c0eec73290ad3ca0e58ee431e1d1ae66bce7c0b7e37054"
+		}
+	},
+	{
+		"uniqueId": 3,
+		"relationshipId": null,
+		"usageCd": "MOBILE",
+		"telephone": {
+			"startDttm": null,
+			"endDttm": null,
+			"localNum": "5180493",
+			"countryCodeNum": 1,
+			"areaCodeNum": "647",
+			"extensionNum": null
+		},
+		"lastUpdate": {
+			"userId": "wcom_user",
+			"userTypeCd": "System",
+			"asOfDttm": 1502290832034,
+			"hash": "dcf19ee89399d42d77c0eec73290ad3ca0e58ee431e1d1ae66bce7c0b7e37054"
+		}
+	},
+	{
+		"uniqueId": 4,
+		"relationshipId": null,
+		"usageCd": "MOBILE",
+		"telephone": {
+			"startDttm": null,
+			"endDttm": null,
+			"localNum": "5180494",
+			"countryCodeNum": 1,
+			"areaCodeNum": "647",
+			"extensionNum": null
+		},
+		"lastUpdate": {
+			"userId": "wcom_user",
+			"userTypeCd": "System",
+			"asOfDttm": 1502290832034,
+			"hash": "dcf19ee89399d42d77c0eec73290ad3ca0e58ee431e1d1ae66bce7c0b7e37054"
+		}
+	}
+	],
+	"identifications": [{
+			"uniqueId": 1,
+			"identificationId": null,
+			"typeCd": "SIN",
+			"identificationNum": "392007191",
+			"statusCd": null,
+			"startDt": null,
+			"endDt": null,
+			"issuingTerritoryCd": null,
+			"issuingCountryCd": null,
+			"documentFormatTypeCd": null,
+			"documentLocationTxt": null,
+			"lastUpdate": {
+				"userId": "appsdwca01",
+				"userTypeCd": "System Batch",
+				"asOfDttm": 1495640468724,
+				"hash": "2df0a09865e5d453c30165a4c9af8abdf682448f77ad9ba02ec2bc8ed38689f2"
+			},
+			"signedDt": null,
+			"requestedDt": null,
+			"reviewedDt": null,
+			"reviewerId": null,
+			"retentionNum": null,
+			"issuingPartyFullName": null,
+			"documentName": null
+		},
+		{
+			"uniqueId": 1,
+			"identificationId": null,
+			"typeCd": "SSN",
+			"identificationNum": "111111118",
+			"statusCd": null,
+			"startDt": null,
+			"endDt": null,
+			"issuingTerritoryCd": null,
+			"issuingCountryCd": null,
+			"documentFormatTypeCd": null,
+			"documentLocationTxt": null,
+			"lastUpdate": {
+				"userId": "appsdwca01",
+				"userTypeCd": "System Batch",
+				"asOfDttm": 1502290937171,
+				"hash": "2df0a09865e5d453c30165a4c9af8abdf682448f77ad9ba02ec2bc8ed38689f2"
+			},
+			"signedDt": null,
+			"requestedDt": null,
+			"reviewedDt": null,
+			"reviewerId": null,
+			"retentionNum": null,
+			"issuingPartyFullName": null,
+			"documentName": null
+		},
+		{
+			"uniqueId": 1,
+			"identificationId": null,
+			"typeCd": "W_8BEN",
+			"identificationNum": null,
+			"statusCd": null,
+			"startDt": null,
+			"endDt": null,
+			"issuingTerritoryCd": null,
+			"issuingCountryCd": null,
+			"documentFormatTypeCd": null,
+			"documentLocationTxt": null,
+			"lastUpdate": {
+				"userId": "appsdwca01",
+				"userTypeCd": "System Batch",
+				"asOfDttm": 1502290937171,
+				"hash": "2df0a09865e5d453c30165a4c9af8abdf682448f77ad9ba02ec2bc8ed38689f2"
+			},
+			"signedDt": null,
+			"requestedDt": null,
+			"reviewedDt": null,
+			"reviewerId": null,
+			"retentionNum": null,
+			"issuingPartyFullName": null,
+			"documentName": null
+		},
+		
+		
+		{
+			"uniqueId": 2,
+			"identificationId": null,
+			"typeCd": "SIN",
+			"identificationNum": "704030014",
+			"statusCd": null,
+			"startDt": null,
+			"endDt": null,
+			"issuingTerritoryCd": null,
+			"issuingCountryCd": null,
+			"documentFormatTypeCd": null,
+			"documentLocationTxt": null,
+			"lastUpdate": {
+				"userId": "appsdwca01",
+				"userTypeCd": "System Batch",
+				"asOfDttm": 1495640468724,
+				"hash": "2df0a09865e5d453c30165a4c9af8abdf682448f77ad9ba02ec2bc8ed38689f2"
+			},
+			"signedDt": null,
+			"requestedDt": null,
+			"reviewedDt": null,
+			"reviewerId": null,
+			"retentionNum": null,
+			"issuingPartyFullName": null,
+			"documentName": null
+		},
+		{
+			"uniqueId": 2,
+			"identificationId": null,
+			"typeCd": "SSN",
+			"identificationNum": "507843425",
+			"statusCd": null,
+			"startDt": null,
+			"endDt": null,
+			"issuingTerritoryCd": null,
+			"issuingCountryCd": null,
+			"documentFormatTypeCd": null,
+			"documentLocationTxt": null,
+			"lastUpdate": {
+				"userId": "appsdwca01",
+				"userTypeCd": "System Batch",
+				"asOfDttm": 1502290937171,
+				"hash": "2df0a09865e5d453c30165a4c9af8abdf682448f77ad9ba02ec2bc8ed38689f2"
+			},
+			"signedDt": null,
+			"requestedDt": null,
+			"reviewedDt": null,
+			"reviewerId": null,
+			"retentionNum": null,
+			"issuingPartyFullName": null,
+			"documentName": null
+		},
+		{
+			"uniqueId": 2,
+			"identificationId": null,
+			"typeCd": "W9",
+			"identificationNum": null,
+			"statusCd": null,
+			"startDt": null,
+			"endDt": null,
+			"issuingTerritoryCd": null,
+			"issuingCountryCd": null,
+			"documentFormatTypeCd": null,
+			"documentLocationTxt": null,
+			"lastUpdate": {
+				"userId": "appsdwca01",
+				"userTypeCd": "System Batch",
+				"asOfDttm": 1502290937171,
+				"hash": "2df0a09865e5d453c30165a4c9af8abdf682448f77ad9ba02ec2bc8ed38689f2"
+			},
+			"signedDt": null,
+			"requestedDt": null,
+			"reviewedDt": null,
+			"reviewerId": null,
+			"retentionNum": null,
+			"issuingPartyFullName": null,
+			"documentName": null
+		},
+		
+		{
+			"uniqueId": 2,
+			"dualSourceIdInd ": true,
+			"identificationId": null,
+			"typeCd": "TELECOM_BILL",
+			"identificationNum": "TB123456",
+			"statusCd": null,
+			"startDt": null,
+			"endDt": null,
+			"issuingTerritoryCd": null,
+			"issuingCountryCd": null,
+			"documentFormatTypeCd": null,
+			"documentLocationTxt": null,
+			"lastUpdate": {
+				"userId": "appsdwca01",
+				"userTypeCd": "System Batch",
+				"asOfDttm": 1502290937171,
+				"hash": "2df0a09865e5d453c30165a4c9af8abdf682448f77ad9ba02ec2bc8ed38689f2"
+			},
+			"signedDt": null,
+			"requestedDt": null,
+			"reviewedDt": null,
+			"reviewerId": null,
+			"retentionNum": null,
+			"issuingPartyFullName": "CITY OF TORONTO",
+			"documentName": null
+		},
+		{
+			"uniqueId": 3,
+			"identificationId": null,
+			"typeCd": "SIN",
+			"identificationNum": "116952862",
+			"statusCd": null,
+			"startDt": null,
+			"endDt": null,
+			"issuingTerritoryCd": null,
+			"issuingCountryCd": null,
+			"documentFormatTypeCd": null,
+			"documentLocationTxt": null,
+			"lastUpdate": {
+				"userId": "appsdwca01",
+				"userTypeCd": "System Batch",
+				"asOfDttm": 1495640468724,
+				"hash": "2df0a09865e5d453c30165a4c9af8abdf682448f77ad9ba02ec2bc8ed38689f2"
+			},
+			"signedDt": null,
+			"requestedDt": null,
+			"reviewedDt": null,
+			"reviewerId": null,
+			"retentionNum": null,
+			"issuingPartyFullName": null,
+			"documentName": null
+		},
+		{
+			"uniqueId": 3,
+			"identificationId": null,
+			"typeCd": "SSN",
+			"identificationNum": "477608667",
+			"statusCd": null,
+			"startDt": null,
+			"endDt": null,
+			"issuingTerritoryCd": null,
+			"issuingCountryCd": null,
+			"documentFormatTypeCd": null,
+			"documentLocationTxt": null,
+			"lastUpdate": {
+				"userId": "appsdwca01",
+				"userTypeCd": "System Batch",
+				"asOfDttm": 1502290937171,
+				"hash": "2df0a09865e5d453c30165a4c9af8abdf682448f77ad9ba02ec2bc8ed38689f2"
+			},
+			"signedDt": null,
+			"requestedDt": null,
+			"reviewedDt": null,
+			"reviewerId": null,
+			"retentionNum": null,
+			"issuingPartyFullName": null,
+			"documentName": null
+		},
+		{
+			"uniqueId": 3,
+			"identificationId": null,
+			"typeCd": "MILITARY_ID",
+			"identificationNum": null,
+			"statusCd": null,
+			"startDt": null,
+			"endDt": null,
+			"issuingTerritoryCd": null,
+			"issuingCountryCd": null,
+			"documentFormatTypeCd": null,
+			"documentLocationTxt": null,
+			"lastUpdate": {
+				"userId": "appsdwca01",
+				"userTypeCd": "System Batch",
+				"asOfDttm": 1502290937171,
+				"hash": "2df0a09865e5d453c30165a4c9af8abdf682448f77ad9ba02ec2bc8ed38689f2"
+			},
+			"signedDt": null,
+			"requestedDt": null,
+			"reviewedDt": null,
+			"reviewerId": null,
+			"retentionNum": null,
+			"issuingPartyFullName": null,
+			"documentName": null
+		},
+		
+		{
+			"uniqueId": 4,
+			"identificationId": null,
+			"typeCd": "SIN",
+			"identificationNum": "201672144",
+			"statusCd": null,
+			"startDt": null,
+			"endDt": null,
+			"issuingTerritoryCd": null,
+			"issuingCountryCd": null,
+			"documentFormatTypeCd": null,
+			"documentLocationTxt": null,
+			"lastUpdate": {
+				"userId": "appsdwca01",
+				"userTypeCd": "System Batch",
+				"asOfDttm": 1495640468724,
+				"hash": "2df0a09865e5d453c30165a4c9af8abdf682448f77ad9ba02ec2bc8ed38689f2"
+			},
+			"signedDt": null,
+			"requestedDt": null,
+			"reviewedDt": null,
+			"reviewerId": null,
+			"retentionNum": null,
+			"issuingPartyFullName": null,
+			"documentName": null
+		},
+		{
+			"uniqueId": 4,
+			"identificationId": null,
+			"typeCd": "SSN",
+			"identificationNum": "359389108",
+			"statusCd": null,
+			"startDt": null,
+			"endDt": null,
+			"issuingTerritoryCd": null,
+			"issuingCountryCd": null,
+			"documentFormatTypeCd": null,
+			"documentLocationTxt": null,
+			"lastUpdate": {
+				"userId": "appsdwca01",
+				"userTypeCd": "System Batch",
+				"asOfDttm": 1502290937171,
+				"hash": "2df0a09865e5d453c30165a4c9af8abdf682448f77ad9ba02ec2bc8ed38689f2"
+			},
+			"signedDt": null,
+			"requestedDt": null,
+			"reviewedDt": null,
+			"reviewerId": null,
+			"retentionNum": null,
+			"issuingPartyFullName": null,
+			"documentName": null
+		},
+		{
+			"uniqueId": 4,
+			"identificationId": null,
+			"typeCd": "DRIVERS_LICENCE",
+			"identificationNum": "KRI6354735",
+			"statusCd": null,
+			"startDt": "2017-09-09",
+			"endDt": "2022-09-09",
+			"issuingTerritoryCd": "ON",
+			"issuingCountryCd": "CA",
+			"documentFormatTypeCd": null,
+			"documentLocationTxt": null,
+			"lastUpdate": {
+				"userId": "appsdwca01",
+				"userTypeCd": "System Batch",
+				"asOfDttm": 1502290937171,
+				"hash": "2df0a09865e5d453c30165a4c9af8abdf682448f77ad9ba02ec2bc8ed38689f2"
+			},
+			"signedDt": null,
+			"requestedDt": null,
+			"reviewedDt": null,
+			"reviewerId": null,
+			"retentionNum": null,
+			"issuingPartyFullName": null,
+			"documentName": null
+		},
+		
+		{
+			"uniqueId": 5,
+			"identificationId": null,
+			"typeCd": "SIN",
+			"identificationNum": "221153687",
+			"statusCd": null,
+			"startDt": null,
+			"endDt": null,
+			"issuingTerritoryCd": null,
+			"issuingCountryCd": null,
+			"documentFormatTypeCd": null,
+			"documentLocationTxt": null,
+			"lastUpdate": {
+				"userId": "appsdwca01",
+				"userTypeCd": "System Batch",
+				"asOfDttm": 1495640468724,
+				"hash": "2df0a09865e5d453c30165a4c9af8abdf682448f77ad9ba02ec2bc8ed38689f2"
+			},
+			"signedDt": null,
+			"requestedDt": null,
+			"reviewedDt": null,
+			"reviewerId": null,
+			"retentionNum": null,
+			"issuingPartyFullName": null,
+			"documentName": null
+		},
+		{
+			"uniqueId": 5,
+			"identificationId": null,
+			"typeCd": "SSN",
+			"identificationNum": "353465633",
+			"statusCd": null,
+			"startDt": null,
+			"endDt": null,
+			"issuingTerritoryCd": null,
+			"issuingCountryCd": null,
+			"documentFormatTypeCd": null,
+			"documentLocationTxt": null,
+			"lastUpdate": {
+				"userId": "appsdwca01",
+				"userTypeCd": "System Batch",
+				"asOfDttm": 1502290937171,
+				"hash": "2df0a09865e5d453c30165a4c9af8abdf682448f77ad9ba02ec2bc8ed38689f2"
+			},
+			"signedDt": null,
+			"requestedDt": null,
+			"reviewedDt": null,
+			"reviewerId": null,
+			"retentionNum": null,
+			"issuingPartyFullName": null,
+			"documentName": null
+		},
+		{
+			"uniqueId": 5,
+			"identificationId": null,
+			"typeCd": "W_8BEN",
+			"identificationNum": null,
+			"statusCd": null,
+			"startDt": null,
+			"endDt": null,
+			"issuingTerritoryCd": null,
+			"issuingCountryCd": null,
+			"documentFormatTypeCd": null,
+			"documentLocationTxt": null,
+			"lastUpdate": {
+				"userId": "appsdwca01",
+				"userTypeCd": "System Batch",
+				"asOfDttm": 1502290937171,
+				"hash": "2df0a09865e5d453c30165a4c9af8abdf682448f77ad9ba02ec2bc8ed38689f2"
+			},
+			"signedDt": null,
+			"requestedDt": null,
+			"reviewedDt": null,
+			"reviewerId": null,
+			"retentionNum": null,
+			"issuingPartyFullName": null,
+			"documentName": null
+		}
+		
+
+	],
+	"alternateKeys": [{
+		"alternateKey": "09M211",
+		"keyTypeCd": "IBM_OSS"
+	}],
+	"usageCd": null,
+	"ownershipPercent": null,
+	"kyc": [{
+			"uniqueId": 1,
+			"startDttm": null,
+			"endDttm": null,
+			"annualIncomeAmt": 100001,
+			"estimateNetWorthAmt": 500,
+			"shareholderNum": null,
+			"dependentsNum": null,
+			"investmentExperience": {
+				"investmentKnowledgeCd": null,
+				"yearsStockInvestmentExperienceCnt": 1,
+				"yearsMutualFundInvestmentExperienceCnt": 0,
+				"yearsBondInvestmentExperienceCnt": 2,
+				"yearsOptionsInvestmentExperienceCnt": 0,
+				"yearsShortSellingInvestmentExperienceCnt": 0
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937123,
+				"hash": "c30bc8d16115b668bd4594c2b1bc46804fdb475c78593ede4e31a721f1dbac18"
+			},
+			"proTypeCd": null
+		},
+		{
+			"uniqueId": 2,
+			"startDttm": null,
+			"endDttm": null,
+			"annualIncomeAmt": 80002,
+			"estimateNetWorthAmt": 500,
+			"shareholderNum": null,
+			"dependentsNum": null,
+			"investmentExperience": {
+				"investmentKnowledgeCd": null,
+				"yearsStockInvestmentExperienceCnt": 0,
+				"yearsMutualFundInvestmentExperienceCnt": 3,
+				"yearsBondInvestmentExperienceCnt": 0,
+				"yearsOptionsInvestmentExperienceCnt": 0,
+				"yearsShortSellingInvestmentExperienceCnt": 4
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937123,
+				"hash": "c30bc8d16115b668bd4594c2b1bc46804fdb475c78593ede4e31a721f1dbac18"
+			},
+			"proTypeCd": null
+		},
+		{
+			"uniqueId": 3,
+			"startDttm": null,
+			"endDttm": null,
+			"annualIncomeAmt": 80003,
+			"estimateNetWorthAmt": 500,
+			"shareholderNum": null,
+			"dependentsNum": null,
+			"investmentExperience": {
+				"investmentKnowledgeCd": null,
+				"yearsStockInvestmentExperienceCnt": 0,
+				"yearsMutualFundInvestmentExperienceCnt": 0,
+				"yearsBondInvestmentExperienceCnt": 0,
+				"yearsOptionsInvestmentExperienceCnt": 0,
+				"yearsShortSellingInvestmentExperienceCnt": 0
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937123,
+				"hash": "c30bc8d16115b668bd4594c2b1bc46804fdb475c78593ede4e31a721f1dbac18"
+			},
+			"proTypeCd": null
+		},
+		{
+			"uniqueId": 4,
+			"startDttm": null,
+			"endDttm": null,
+			"annualIncomeAmt": 80004,
+			"estimateNetWorthAmt": 504,
+			"shareholderNum": null,
+			"dependentsNum": null,
+			"investmentExperience": {
+				"investmentKnowledgeCd": null,
+				"yearsStockInvestmentExperienceCnt": 0,
+				"yearsMutualFundInvestmentExperienceCnt": 0,
+				"yearsBondInvestmentExperienceCnt": 0,
+				"yearsOptionsInvestmentExperienceCnt": 0,
+				"yearsShortSellingInvestmentExperienceCnt": 0
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937123,
+				"hash": "c30bc8d16115b668bd4594c2b1bc46804fdb475c78593ede4e31a721f1dbac18"
+			},
+			"proTypeCd": null
+		},
+		{
+			"uniqueId": 5,
+			"startDttm": null,
+			"endDttm": null,
+			"fundedInd": true,
+			"annualIncomeAmt": 15000,
+			"estimateNetWorthAmt": 500,
+			"shareholderNum": null,
+			"dependentsNum": null,
+			"investmentExperience": {
+				"investmentKnowledgeCd": null,
+				"yearsStockInvestmentExperienceCnt": 0,
+				"yearsMutualFundInvestmentExperienceCnt": 0,
+				"yearsBondInvestmentExperienceCnt": 0,
+				"yearsOptionsInvestmentExperienceCnt": 0,
+				"yearsShortSellingInvestmentExperienceCnt": 0
+			},
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937123,
+				"hash": "c30bc8d16115b668bd4594c2b1bc46804fdb475c78593ede4e31a721f1dbac18"
+			},
+			"proTypeCd": null
+		}
+	],
+	"fatca": {
+		"startDttm": null,
+		"endDttm": null,
+		"statusCd": null,
+		"statusDt": null,
+		"classificationTypeCd": null,
+		"usTaxRecipientTypeCd": null,
+		"qualifiedInvestorInd": null,
+		"usSelfDeclaredInd": null,
+		"usIndiciaInd": null,
+		"usIndiciaEffectiveDt": null,
+		"lastUpdate": null,
+		"usBornInd": null
+	},
+"crs": [
+        {
+            "uniqueId": 1,
+            "startDttm": "1963-01-17",
+            "endDttm": "2021-12-09",
+            "statusCd": 0,
+            "statusDt": null,
+            "classificationTypeCd": null,
+            "certificationDt": "1963-01-17",
+            "attestationDt": "1963-01-17",
+            "certificationSignedInd": true,
+            "preexistingAgreementInd": null,
+            "lastUpdate": null,
+            "usCitizenInd": null,
+            "certifications": [
+                {
+                    "tinRequiredInd": null,
+                    "tinOnFileInd": null,
+                    "certificationId": null,
+                    "lastUpdate": null,
+                    "documentNum": "111111111",
+                    "countryCd": "IN",
+                    "documentTypeCd": "FTIN"
+                },
+                {
+                    "tinRequiredInd": null,
+                    "tinOnFileInd": null,
+                   "certificationId": null,
+                    "lastUpdate": null,
+                    "documentNum": "010626501",
+                    "countryCd": "US",
+                    "documentTypeCd": "ITIN"
+                }
+                
+            ]
+        },
+        {
+            "uniqueId": 2,
+            "startDttm": "1963-01-17",
+            "endDttm": "2021-12-09",
+            "statusCd": 0,
+            "statusDt": null,
+            "classificationTypeCd": null,
+            "certificationDt": "1963-01-17",
+            "attestationDt": "1963-01-17",
+            "certificationSignedInd": true,
+            "preexistingAgreementInd": null,
+            "lastUpdate": null,
+            "usCitizenInd": null,
+            "certifications": [
+                {
+                    "tinRequiredInd": null,
+                    "tinOnFileInd": null,
+                    "certificationId": null,
+                    "lastUpdate": null,
+                    "documentNum": "111111112",
+                    "countryCd": "IN",
+                    "documentTypeCd": "FTIN"
+                },
+                {
+                    "tinRequiredInd": null,
+                    "tinOnFileInd": null,
+                   "certificationId": null,
+                    "lastUpdate": null,
+                    "documentNum": "010626502",
+                    "countryCd": "US",
+                    "documentTypeCd": "ITIN"
+                }
+                
+            ]
+        },
+        {
+            "uniqueId": 3,
+            "startDttm": "1963-01-17",
+            "endDttm": "2021-12-09",
+            "statusCd": 0,
+            "statusDt": null,
+            "classificationTypeCd": null,
+            "certificationDt": "1963-01-17",
+            "attestationDt": "1963-01-17",
+            "certificationSignedInd": true,
+            "preexistingAgreementInd": null,
+            "lastUpdate": null,
+            "usCitizenInd": null,
+            "certifications": [
+                {
+                    "tinRequiredInd": null,
+                    "tinOnFileInd": null,
+                    "certificationId": null,
+                    "lastUpdate": null,
+                    "documentNum": "111111113",
+                    "countryCd": "IN",
+                    "documentTypeCd": "FTIN"
+                },
+                {
+                    "tinRequiredInd": null,
+                    "tinOnFileInd": null,
+                   "certificationId": null,
+                    "lastUpdate": null,
+                    "documentNum": "010626503",
+                    "countryCd": "US",
+                    "documentTypeCd": "ITIN"
+                },
+                {
+                    "tinRequiredInd": null,
+                    "tinOnFileInd": null,
+                    "certificationId": null,
+                    "lastUpdate": null,
+                    "documentNum": "311412761",
+                    "countryCd": "CA",
+                   "documentTypeCd": "SIN"
+                }
+            ]
+        },
+        {
+            "uniqueId": 4,
+            "startDttm": "1963-01-17",
+            "endDttm": "2021-12-09",
+            "statusCd": 0,
+            "statusDt": null,
+            "classificationTypeCd": null,
+            "certificationDt": "1963-01-17",
+            "attestationDt": "1963-01-17",
+            "certificationSignedInd": true,
+            "preexistingAgreementInd": null,
+            "lastUpdate": null,
+            "usCitizenInd": null,
+            "certifications": [
+                {
+                    "tinRequiredInd": null,
+                    "tinOnFileInd": null,
+                    "certificationId": null,
+                    "lastUpdate": null,
+                    "documentNum": "111111114",
+                    "countryCd": "IN",
+                    "documentTypeCd": "FTIN"
+                },
+                {
+                    "tinRequiredInd": null,
+                    "tinOnFileInd": null,
+                   "certificationId": null,
+                    "lastUpdate": null,
+                    "documentNum": "010626504",
+                    "countryCd": "US",
+                    "documentTypeCd": "ITIN"
+                }
+                
+            ]
+        },
+        {
+            "uniqueId": 5,
+            "startDttm": "1963-01-17",
+            "endDttm": "2021-12-09",
+            "statusCd": 0,
+            "statusDt": null,
+            "classificationTypeCd": null,
+            "certificationDt": "1963-01-17",
+            "attestationDt": "1963-01-17",
+            "certificationSignedInd": true,
+            "preexistingAgreementInd": null,
+            "lastUpdate": null,
+            "usCitizenInd": null,
+            "certifications": [
+                {
+                    "tinRequiredInd": null,
+                    "tinOnFileInd": null,
+                    "certificationId": null,
+                    "lastUpdate": null,
+                    "documentNum": "111111115",
+                    "countryCd": "IN",
+                    "documentTypeCd": "FTIN"
+                },
+                {
+                    "tinRequiredInd": null,
+                    "tinOnFileInd": null,
+                   "certificationId": null,
+                    "lastUpdate": null,
+                    "documentNum": "010626505",
+                    "countryCd": "US",
+                    "documentTypeCd": "ITIN"
+                }
+                
+            ]
+        }
+    ],
+
+	"actionType": null,
+	"individuals": [{
+			"uniqueId": 1,
+			"partyId": null,
+			"startDttm": null,
+			"endDttm": null,
+			"partyTypeCd": "P",
+			"proTypeCd": null,
+			"statusCd": null,
+			"globalIdentificationNum": null,
+			"bankruptcyDt": null,
+			"correspondenceTypeCd": null,
+			"correspondenceLangCd": "en",
+		"nonResidentCds": [
+			{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M211A"
+	},
+	{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M211B"
+	},
+	{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M207A"
+	},
+	{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M207B"
+	},
+		{
+		"nonResidentStatusCd": "2",
+		"accountNumber": "09M206V"
+	}
+	
+
+],
+
+			"names": [{
+				"nameId": null,
+				"nameTypeCd": "PERSONAL_LEGAL_NAME",
+				"givenName": "FENIL",
+        		 "middleName": "MATHEW",
+        		 "familyName": "GEO",
+				"titleTypeCd": null,
+				"suffixTypeCd": null,
+				"startDttm": null,
+				"endDttm": null,
+				"lastUpdate": {
+					"userId": "wcom_user",
+					"userTypeCd": "System",
+					"asOfDttm": 1502290937138,
+					"hash": "72e5bab77516f50403fa801b719c97b2ffe265c39a6cc501f854231ea16390be"
+				}
+			}],
+			"residenceCountryCd": "34",
+			"genderTypeCd": null,
+			"maritalStatusCd": "C",
+			"birthDt": "1970-10-07",
+			"deceasedDt": null,
+			"birthCountryCd": null,
+			"nonResidentStatusCd": null,
+			"citizenships": [{
+				"citizenshipId": null,
+				"startDttm": null,
+				"endDttm": null,
+				"citizenshipCd": "CA",
+				"lastUpdate": {
+					"userId": "wcom_user",
+					"userTypeCd": "System",
+					"asOfDttm": 1502290937157,
+					"hash": "07a0c094a2876f829c4b330f5883e67b911b29f7f5792b970cfb535f33a8462d"
+				}
+			}],
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937088,
+				"hash": "4d42873c4f91efad67bd88e878c4844d7fe1179a0bd50f8288b3bf51c19004d7"
+			},
+			"partyProfile": {
+				"partyId": null
+			},
+			"relationshipTypeCd": "SELF",
+			"employment": {
+				"statusCd": "STUDENT",
+				"employerName": "ABC INC",
+				"occupationTypeCd": "280009",
+				"socInfo": null,
+				"jobTitleTxt": "280009",
+				"streetAddress": {
+					"usageCd": "EMPLOYER",
+					"relationshipId": null,
+					"address": {
+						"streetNumSuffixVal": null,
+						"territoryCd": "ON",
+						"ruralRouteNum": null,
+						"ruralRouteTypeCd": null,
+						"cityName": "markham",
+						"unitTypeCd": null,
+						"streetTypeCd": null,
+						"streetName": "chloe cres",
+						"endDttm": null,
+						"streetDirectionCd": null,
+						"addressId": null,
+						"addressLine": null,
+						"unitNum": null,
+						"postalCode": "L3S 2J2",
+						"startDttm": null,
+						"poBox": null,
+						"countryCd": "CA",
+						"postalStationTxt": null,
+						"streetNum": "122"
+					},
+					"lastUpdate": null
+				},
+				"telephone": {
+					"startDttm": null,
+					"endDttm": null,
+					"localNum": "5180492",
+					"countryCodeNum": 1,
+					"areaCodeNum": "647",
+					"extensionNum": null
+				}
+			}
+		},
+		{
+			"uniqueId": 2,
+			"partyId": null,
+			"startDttm": null,
+			"endDttm": null,
+			"partyTypeCd": "P",
+			"proTypeCd": null,
+			"statusCd": null,
+			"globalIdentificationNum": null,
+			"bankruptcyDt": null,
+			"correspondenceTypeCd": null,
+			"correspondenceLangCd": "en",
+			"nonResidentCds": [{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M211A"
+	},
+	{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M211B"
+	},
+	{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M207A"
+	},
+	{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M207B"
+	},
+	{
+		"nonResidentStatusCd": "2",
+		"accountNumber": "09M206V"
+	}
+	
+
+
+],
+			
+			"names": [{
+				"nameId": null,
+				"nameTypeCd": "PERSONAL_LEGAL_NAME",
+				"givenName": "BAB",
+        		"middleName": "MATHEW",
+        		"familyName": "GEO",
+				"titleTypeCd": null,
+				"suffixTypeCd": null,
+				"startDttm": null,
+				"endDttm": null,
+				"lastUpdate": {
+					"userId": "wcom_user",
+					"userTypeCd": "System",
+					"asOfDttm": 1502290937171,
+					"hash": "72e5bab77516f50403fa801b719c97b2ffe265c39a6cc501f854231ea16390be"
+				}
+			}],
+			"residenceCountryCd": "34",
+			"genderTypeCd": null,
+			"maritalStatusCd": "M",
+			"birthDt": "2000-10-07",
+			"deceasedDt": null,
+			"birthCountryCd": null,
+			"nonResidentStatusCd": null,
+			"citizenships": [{
+				"citizenshipId": null,
+				"startDttm": null,
+				"endDttm": null,
+				"citizenshipCd": "CA",
+				"lastUpdate": {
+					"userId": "wcom_user",
+					"userTypeCd": "System",
+					"asOfDttm": 1502290937171,
+					"hash": "07a0c094a2876f829c4b330f5883e67b911b29f7f5792b970cfb535f33a8462d"
+				}
+			}],
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937171,
+				"hash": "4d42873c4f91efad67bd88e878c4844d7fe1179a0bd50f8288b3bf51c19004d7"
+			},
+			"partyProfile": {
+				"partyId": null
+			},
+			"relationshipTypeCd": "SPOUSE",
+			"relationshipDesc": null,
+			"employment": {
+				"statusCd": "EMPLOYED",
+				"employerName": "ABC INC",
+				"occupationTypeCd": "180009",
+				"socInfo": null,
+				"jobTitleTxt": "180009",
+				"streetAddress": {
+					"usageCd": "EMPLOYER",
+					"relationshipId": null,
+					"address": {
+						"streetNumSuffixVal": null,
+						"territoryCd": "ON",
+						"ruralRouteNum": null,
+						"ruralRouteTypeCd": null,
+						"cityName": "COURTICE",
+						"unitTypeCd": null,
+						"streetTypeCd": null,
+						"streetName": "HANCOCK ROAD",
+						"endDttm": null,
+						"streetDirectionCd": null,
+						"addressId": null,
+						"addressLine": null,
+						"unitNum": null,
+						"postalCode": "L1E2M3",
+						"startDttm": null,
+						"poBox": null,
+						"countryCd": "CA",
+						"postalStationTxt": null,
+						"streetNum": "2448"
+					},
+					"lastUpdate": null
+				},
+				"telephone": {
+					"startDttm": null,
+					"endDttm": null,
+					"localNum": "5180492",
+					"countryCodeNum": 1,
+					"areaCodeNum": "647",
+					"extensionNum": null
+				}
+			}
+		},
+		{
+			"uniqueId": 3,
+			"partyId": null,
+			"startDttm": null,
+			"endDttm": null,
+			"partyTypeCd": "P",
+			"proTypeCd": null,
+			"statusCd": null,
+			"globalIdentificationNum": null,
+			"bankruptcyDt": null,
+			"correspondenceTypeCd": null,
+			"correspondenceLangCd": "en",
+			"nonResidentCds": [{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M211A"
+	},
+	{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M211B"
+	},
+	{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M207A"
+	},
+	{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M207B"
+	},
+	{
+		"nonResidentStatusCd": "2",
+		"accountNumber": "09M206V"
+	}
+
+
+],
+			"names": [{
+				"nameId": null,
+				"nameTypeCd": "PERSONAL_LEGAL_NAME",
+				"givenName": "NAVEEN",
+        		"middleName": "MATHEW",
+        		"familyName": "GEO",
+				"titleTypeCd": null,
+				"suffixTypeCd": null,
+				"startDttm": null,
+				"endDttm": null,
+				"lastUpdate": {
+					"userId": "wcom_user",
+					"userTypeCd": "System",
+					"asOfDttm": 1502290937171,
+					"hash": "72e5bab77516f50403fa801b719c97b2ffe265c39a6cc501f854231ea16390be"
+				}
+			}],
+			"residenceCountryCd": "34",
+			"genderTypeCd": null,
+			"maritalStatusCd": "M",
+			"birthDt": "1987-10-07",
+			"deceasedDt": null,
+			"birthCountryCd": null,
+			"nonResidentStatusCd": null,
+			"citizenships": [{
+				"citizenshipId": null,
+				"startDttm": null,
+				"endDttm": null,
+				"citizenshipCd": "CA",
+				"lastUpdate": {
+					"userId": "wcom_user",
+					"userTypeCd": "System",
+					"asOfDttm": 1502290937171,
+					"hash": "07a0c094a2876f829c4b330f5883e67b911b29f7f5792b970cfb535f33a8462d"
+				}
+			}],
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937171,
+				"hash": "4d42873c4f91efad67bd88e878c4844d7fe1179a0bd50f8288b3bf51c19004d7"
+			},
+			"partyProfile": {
+				"partyId": null
+			},
+			"relationshipTypeCd": "SIBLING",
+			"relationshipDesc": null,
+			"employment": {
+				"statusCd": "EMPLOYED",
+				"employerName": "ABC INC",
+				"occupationTypeCd": "300017",
+				"socInfo": null,
+				"jobTitleTxt": "300017",
+				"streetAddress": {
+					"usageCd": "EMPLOYER",
+					"relationshipId": null,
+					"address": {
+						"streetNumSuffixVal": null,
+						"territoryCd": "ON",
+						"ruralRouteNum": null,
+						"ruralRouteTypeCd": null,
+						"cityName": "COURTICE",
+						"unitTypeCd": null,
+						"streetTypeCd": null,
+						"streetName": "HANCOCK ROAD",
+						"endDttm": null,
+						"streetDirectionCd": null,
+						"addressId": null,
+						"addressLine": null,
+						"unitNum": null,
+						"postalCode": "L1E2M3",
+						"startDttm": null,
+						"poBox": null,
+						"countryCd": "CA",
+						"postalStationTxt": null,
+						"streetNum": "2448"
+					},
+					"lastUpdate": null
+				},
+				"telephone": {
+					"startDttm": null,
+					"endDttm": null,
+					"localNum": "5180492",
+					"countryCodeNum": 1,
+					"areaCodeNum": "647",
+					"extensionNum": null
+				}
+			}
+		},
+		{
+			"uniqueId": 4,
+			"partyId": null,
+			"startDttm": null,
+			"endDttm": null,
+			"partyTypeCd": "P",
+			"proTypeCd": null,
+			"statusCd": null,
+			"globalIdentificationNum": null,
+			"bankruptcyDt": null,
+			"correspondenceTypeCd": null,
+			"correspondenceLangCd": "en",
+			"nonResidentCds": [{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M211A"
+	},
+	{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M211B"
+	},
+	{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M207A"
+	},
+	{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M207B"
+	},
+	{
+		"nonResidentStatusCd": "2",
+		"accountNumber": "09M206V"
+	}
+
+
+],
+			"names": [{
+				"nameId": null,
+				"nameTypeCd": "PERSONAL_LEGAL_NAME",
+				"givenName": "JASMIN",
+        		"middleName": "MATHEW",
+        		"familyName": "GEO",
+				"titleTypeCd": null,
+				"suffixTypeCd": null,
+				"startDttm": null,
+				"endDttm": null,
+				"lastUpdate": {
+					"userId": "wcom_user",
+					"userTypeCd": "System",
+					"asOfDttm": 1502290937171,
+					"hash": "72e5bab77516f50403fa801b719c97b2ffe265c39a6cc501f854231ea16390be"
+				}
+			}],
+			"residenceCountryCd": "34",
+			"genderTypeCd": null,
+			"maritalStatusCd": "M",
+			"birthDt": "1992-10-07",
+			"deceasedDt": null,
+			"birthCountryCd": null,
+			"nonResidentStatusCd": null,
+			"citizenships": [{
+				"citizenshipId": null,
+				"startDttm": null,
+				"endDttm": null,
+				"citizenshipCd": "CA",
+				"lastUpdate": {
+					"userId": "wcom_user",
+					"userTypeCd": "System",
+					"asOfDttm": 1502290937171,
+					"hash": "07a0c094a2876f829c4b330f5883e67b911b29f7f5792b970cfb535f33a8462d"
+				}
+			}],
+			"lastUpdate": {
+				"userId": "wcom_user",
+				"userTypeCd": "System",
+				"asOfDttm": 1502290937171,
+				"hash": "4d42873c4f91efad67bd88e878c4844d7fe1179a0bd50f8288b3bf51c19004d7"
+			},
+			"partyProfile": {
+				"partyId": null
+			},
+			"relationshipTypeCd": "SIBLING",
+			"relationshipDesc": null,
+			"employment": {
+				"statusCd": "EMPLOYED",
+				"employerName": "ABCD INC",
+				"occupationTypeCd": "110006",
+				"socInfo": null,
+				"jobTitleTxt": "110006",
+				"streetAddress": {
+					"usageCd": "EMPLOYER",
+					"relationshipId": null,
+					"address": {
+						"streetNumSuffixVal": null,
+						"territoryCd": "ON",
+						"ruralRouteNum": null,
+						"ruralRouteTypeCd": null,
+						"cityName": "COURTICE",
+						"unitTypeCd": null,
+						"streetTypeCd": null,
+						"streetName": "HANCOCK ROAD",
+						"endDttm": null,
+						"streetDirectionCd": null,
+						"addressId": null,
+						"addressLine": null,
+						"unitNum": null,
+						"postalCode": "L1E2M3",
+						"startDttm": null,
+						"poBox": null,
+						"countryCd": "CA",
+						"postalStationTxt": null,
+						"streetNum": "2448"
+					},
+					"lastUpdate": null
+				},
+				"telephone": {
+					"startDttm": null,
+					"endDttm": null,
+					"localNum": "5180492",
+					"countryCodeNum": 1,
+					"areaCodeNum": "647",
+					"extensionNum": null
+				}
+			}
+		},
+		{
+      "uniqueId": 5,
+      "partyId": null,
+      "startDttm": null,
+      "endDttm": null,
+      "partyTypeCd": "P",
+      "proTypeCd": null,
+      "statusCd": null,
+      "globalIdentificationNum": null,
+      "bankruptcyDt": null,
+      "correspondenceTypeCd": null,
+      "correspondenceLangCd": "en",
+      
+      "nonResidentCds": [{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M211A"
+	},
+	{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M211B"
+	},
+	{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M207A"
+	},
+	{
+		"nonResidentStatusCd": "1",
+		"accountNumber": "09M207B"
+	},
+	{
+		"nonResidentStatusCd": "2",
+		"accountNumber": "09M206V"
+	}
+
+
+],
+      
+      "names": [
+        {
+          "nameId": null,
+          "nameTypeCd": "PERSONAL_LEGAL_NAME",
+          "givenName": "LEO",
+          "middleName": "MATHEW",
+          "familyName": "GEO",
+          "titleTypeCd": null,
+          "suffixTypeCd": null,
+          "startDttm": null,
+          "endDttm": null,
+          "lastUpdate": {
+            "userId": "wcom_user",
+            "userTypeCd": "System",
+            "asOfDttm": 1502290937171,
+            "hash": "72e5bab77516f50403fa801b719c97b2ffe265c39a6cc501f854231ea16390be"
+          }
+        }
+      ],
+      
+     
+     
+      "residenceCountryCd": "34",
+      "genderTypeCd": null,
+      "maritalStatusCd": "M",
+      "birthDt": "2016-10-07",
+      "deceasedDt": null,
+      "birthCountryCd": null,
+      "nonResidentStatusCd": null,
+      "beaconScore" : "test",
+      "citizenships": [
+        {
+          "citizenshipId": null,
+          "startDttm": null,
+          "endDttm": null,
+          "citizenshipCd": "CA",
+          "lastUpdate": {
+            "userId": "wcom_user",
+            "userTypeCd": "System",
+            "asOfDttm": 1502290937171,
+            "hash": "07a0c094a2876f829c4b330f5883e67b911b29f7f5792b970cfb535f33a8462d"
+          }
+        }
+      ],
+      "lastUpdate": {
+        "userId": "wcom_user",
+        "userTypeCd": "System",
+        "asOfDttm": 1502290937171,
+        "hash": "4d42873c4f91efad67bd88e878c4844d7fe1179a0bd50f8288b3bf51c19004d7"
+      },
+      "partyProfile": {
+        "partyId": null
+      },
+      "relationshipTypeCd": "CHILD",
+      "employment": {
+        "statusCd": "STUDENT",
+        "employerName": "SCHOOL OF MUSIC TORONTO",
+        "occupationTypeCd": "280009",
+        "socInfo": null,
+        "jobTitleTxt": "280009",
+        "streetAddress": {
+          "usageCd": "EMPLOYER",
+          "relationshipId": null,
+          "address": {
+            "streetNumSuffixVal": null,
+            "territoryCd": "ON",
+            "ruralRouteNum": null,
+            "ruralRouteTypeCd": null,
+            "cityName": "markham",
+            "unitTypeCd": null,
+            "streetTypeCd": null,
+            "streetName": "chloe cres",
+            "endDttm": null,
+            "streetDirectionCd": null,
+            "addressId": null,
+            "addressLine": null,
+            "unitNum": null,
+            "postalCode": "L3S 2J2",
+            "startDttm": null,
+            "poBox": null,
+            "countryCd": "CA",
+            "postalStationTxt": null,
+            "streetNum": "122"
+          },
+          "lastUpdate": null
+        },
+        "telephone": {
+          "startDttm": null,
+          "endDttm": null,
+          "localNum": "5180492",
+          "countryCodeNum": 1,
+          "areaCodeNum": "647",
+          "extensionNum": null
+        }
+      }
+    }
+	],
+	"misc": [
+
+
+		{
+			"referringAgent": {
+				"acf2id": "12345",
+				"transitNumber": "1234"
+			},
+			"applicationType": "N2B",
+			"beaconScore": "485/500"
+		}
+	],
+	"interestedAccounts": [{
+			"relationshipToAccount": "ACC_HLDR",
+			"accountNumber": "09M211A",
+			"allocationPercentage": null,
+			"uniqueId": 2
+		},
+		{
+			"relationshipToAccount": "ACC_HLDR",
+			"accountNumber": "09M211B",
+			"allocationPercentage": null,
+			"uniqueId": 2
+		},
+		{
+			"relationshipToAccount": "ACC_HLDR",
+			"accountNumber": "09M211A",
+			"allocationPercentage": null,
+			"uniqueId": 3
+		},
+		{
+			"relationshipToAccount": "ACC_HLDR",
+			"accountNumber": "09M211B",
+			"allocationPercentage": null,
+			"uniqueId": 3
+		},
+		{
+			"relationshipToAccount": "ACC_HLDR",
+			"accountNumber": "09M211A",
+			"allocationPercentage": null,
+			"uniqueId": 4
+		},
+		{
+			"relationshipToAccount": "ACC_HLDR",
+			"accountNumber": "09M211B",
+			"allocationPercentage": null,
+			"uniqueId": 4
+		},
+		{
+        "relationshipToAccount": "ACC_BNF",
+        "accountNumber": "09M211A",
+        "allocationPercentage": null,
+        "uniqueId": 5
+    },
+      	{
+        "relationshipToAccount": "ACC_BNF",
+        "accountNumber": "09M211B",
+        "allocationPercentage": null,
+        "uniqueId": 5
+    },
+    {
+			"relationshipToAccount": "ACC_HLDR",
+			"accountNumber": "09M207A",
+			"allocationPercentage": null,
+			"uniqueId": 2
+		},
+		{
+			"relationshipToAccount": "ACC_HLDR",
+			"accountNumber": "09M207B",
+			"allocationPercentage": null,
+			"uniqueId": 2
+		},
+		{
+			"relationshipToAccount": "ACC_HLDR",
+			"accountNumber": "09M207A",
+			"allocationPercentage": null,
+			"uniqueId": 3
+		},
+		{
+			"relationshipToAccount": "ACC_HLDR",
+			"accountNumber": "09M207B",
+			"allocationPercentage": null,
+			"uniqueId": 3
+		},
+		{
+			"relationshipToAccount": "ACC_HLDR",
+			"accountNumber": "09M207A",
+			"allocationPercentage": null,
+			"uniqueId": 4
+		},
+		{
+			"relationshipToAccount": "ACC_HLDR",
+			"accountNumber": "09M207B",
+			"allocationPercentage": null,
+			"uniqueId": 4
+		},
+		{
+        "relationshipToAccount": "ACC_BNF",
+        "accountNumber": "09M207A",
+        "allocationPercentage": null,
+        "uniqueId": 5
+    },
+      	{
+        "relationshipToAccount": "ACC_BNF",
+        "accountNumber": "09M207B",
+        "allocationPercentage": null,
+        "uniqueId": 5
+    },
+    {
+        "relationshipToAccount": "ACC_BNF",
+        "accountNumber": "09M206V",
+        "allocationPercentage": null,
+        "uniqueId": 5
+    }
+    
+
+	],
+	"cmMasterClientId": "09M211",
+	"appId": "60510"
+}
