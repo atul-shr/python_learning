@@ -14,3 +14,4 @@ item_name varchar(2000),
 item_value varchar(1000),
 insert_date date
 );  
+
