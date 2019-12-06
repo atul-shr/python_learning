@@ -1,9 +1,6 @@
 #!/usr/bin/python
-
 import sys
-
 arg = sys.argv[1:]
-
 for items in arg:
 	if int(items) < 0:
 		print 'Value less than zero'
