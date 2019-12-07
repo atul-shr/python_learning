@@ -18,6 +18,9 @@ def config_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument("-c","--config", help="provide the config to get db details")
     parser.add_argument("-t","--type", help="provide the type of comparison",choices=['SQL_EXE','FILE_COMP'])
+    parser.add_argument("-file_comp_ini","--file_comp_ini", help="config name when file compare is required")
+    parser.add_argument("-sql_loc","--sql_loc", help="sql file location")
+    parser.add_argument("-outfile_loc","--outfile_loc", help="output file location")
     args = parser.parse_args()
     if not args.config or not args.type:
         logger.error("Error !! - Arguments Required , check help!!")
@@ -48,12 +51,12 @@ def createDictConfig(cf):
             dict_cfg[items][mt] = cnfg[items][mt]
     return dict_cfg
 
-def createCon(dict):
-    hr_usr = dict['LEARNING_CONFIG']['hr_usr']
-    hr_pwd = dict['LEARNING_CONFIG']['hr_pwd']
-    hr_sid = dict['LEARNING_CONFIG']['hr_sid']
-    hr = db.dbCon(hr_usr,hr_pwd,hr_sid)
-    return  hr.createConnection()
+def createSqlCon(dict):
+    usr = dict['SQL']['usr']
+    pwd = dict['SQL']['pwd']
+    sid = dict['SQL']['sid']
+    con_obj = db.dbCon(usr,pwd,sid)
+    return  con_obj.createConnection()
 
 
 # -- Main function to start processing script --
@@ -61,13 +64,13 @@ def main():
 
     arg = config_arguments()
     config_dict = createDictConfig(arg.config)
-    hr_con = createCon(config_dict)
+    hr_con = createSqlCon(config_dict)
     # logger.info(config_dict)
     
 
     if arg.type == 'SQL_EXE':
         sql_df = executeSql(hr_con,'D:\\learning\\code\\utils\\VSS\\sql\\user_tables.sql')
-        sql_df.to_csv('D:\\learning\\code\\utils\\VSS\\sql\\sql_output.csv',index=False)
+        sql_df.to_csv('D:\\learning\\code\\utils\\VSS\\outbound\\sql_output.csv',index=False)
 
     elif arg.type == 'FILE_COMP':
         compFile()
