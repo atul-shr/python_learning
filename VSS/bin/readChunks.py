@@ -2,7 +2,7 @@ import pandas as pd
 import cx_Oracle as cx
 import datetime
 
-con = cx.connect('pharma/pharma@LAPTOP-21RC5VEQ:1521/XE')
+con = cx.connect('pharma/pharma@LAPTOP-21RC5VEQ:1521/XE') 
 
 current_time = datetime.datetime.now()
 old_time = datetime.datetime.now()
