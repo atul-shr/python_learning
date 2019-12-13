@@ -22,7 +22,7 @@ try:
     os.remove('final_out.csv')
     print("File Removed!")
 except:
-    print("File Not Available!")    
+    print("File Not Available!")     
 
 for chunks in (pd.read_sql(sql='select * from inventory',con=con,chunksize=100000)):
     now_time = datetime.datetime.now() - then_time
