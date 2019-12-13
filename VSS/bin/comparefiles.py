@@ -82,7 +82,7 @@ def main():
 logging.basicConfig(level='DEBUG',format='[%(name)s - %(levelname)s  : %(asctime)s ] - %(message)s')
 logger = logging.getLogger(__name__)
 
-
+ 
 if __name__ == '__main__':
     main()
 
