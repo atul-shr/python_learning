@@ -30,29 +30,28 @@ def parse_arg():
     args = parser.parse_args()
     if not args.name:
         print("Argument not available")
-    print("Input Params are " + '-' * 40)
+    print("Input Params are " + '-' * 30)
     print(args)
-    print("Input Params are " + '-' * 40)
+    print("Input Params are " + '-' * 30)
     return args
 
 
 args = parse_arg()
 
-writer =  pd.ExcelWriter('D:\\learning\\code\\utils\\VSS\\outbound\\ObjectsList_' + args.type + '_' + args.name +'.xlsx')
+writer =  pd.ExcelWriter('D:\\learning\\code\\utils\\VSS\\outbound\\ObjectsList_' + args.type.lower() + '_' + args.name.lower() +'.xlsx')
 
-if args.type == 'COLUMN':
-    df_source = pd.read_sql("select * from all_source where upper(text) like '%{}%'".format(args.name),con=con)
+if args.type.upper() == 'TABLE':
+    df_depend = pd.read_sql("select * from all_dependencies where upper(REFERENCED_NAME) like '%{}%'".format(args.name.upper()),con=con)
+    df_depend.to_excel(writer, sheet_name='Dependencies',index=False)
 
-    df_cols = pd.read_sql("select * from all_tab_cols where upper(column_name) like '%{}%'".format(args.name),con=con)
-    
-    df_source.to_excel(writer, sheet_name='Source_Existance',index=False)
-    
+
+if args.type.upper() == 'COLUMN':
+    df_cols = pd.read_sql("select * from all_tab_cols where upper(column_name) like '%{}%'".format(args.name.upper()),con=con)
     df_cols.to_excel(writer, sheet_name='Cols_in_Tables',index=False)
 
 
-elif args.type == 'TABLE':
-    df_depend = pd.read_sql("select * from all_dependencies where upper(REFERENCED_NAME) like '%{}%'".format(args.name),con=con)
+df_source = pd.read_sql("select * from all_source where upper(text) like '%{}%'".format(args.name.upper()),con=con)
+df_source.to_excel(writer, sheet_name='Source_Existance',index=False)
 
-    df_depend.to_excel(writer, sheet_name='Dependencies',index=False)
 
 writer.close()
