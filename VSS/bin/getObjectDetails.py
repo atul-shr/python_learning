@@ -38,7 +38,7 @@ def parse_arg():
 
 args = parse_arg()
 
-writer =  pd.ExcelWriter('D:\\learning\\code\\utils\\VSS\\outbound\\ObjectsList_' + args.type.lower() + '_' + args.name.lower() +'.xlsx')
+writer =  pd.ExcelWriter('D:\\learning\\code\\utils\\VSS\\outbound\\Excel_ObjectsList_' + args.type.lower() + '_' + args.name.lower() +'.xlsx')
 
 if args.type.upper() == 'TABLE':
     df_depend = pd.read_sql("select * from all_dependencies where upper(REFERENCED_NAME) like '%{}%'".format(args.name.upper()),con=con)
