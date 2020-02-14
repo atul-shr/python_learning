@@ -1,0 +1,3 @@
+python D:\\learning\\code\\utils\\VSS\\bin\\xlsToCsv.py --inpfile D:\\learning\\code\\utils\\VSS\\outbound\\Excel_ObjectsList_column_job_id.xlsx --outfile D:\\learning\\code\\utils\\VSS\\outbound\\Csv_ObjectsList_column_job_id.csv
+
+python D:\\learning\\code\\utils\\VSS\\bin\\xlsToCsv.py --inpfile D:\\learning\\code\\utils\\VSS\\outbound\\Excel_ObjectsList_column_job_id.xlsx --outfile D:\\learning\\code\\utils\\VSS\\outbound\\Csv_ObjectsList_column_job_id.csv --worksheet 0,1,cc
