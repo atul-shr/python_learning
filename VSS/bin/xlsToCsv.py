@@ -34,8 +34,6 @@ def createCsv(inf,outf,worksheet):
             read_file = pd.read_excel (inf)
         else :
             final_dir_name = os.path.dirname(inf)
-            print(worksheet,'value in function for worksheet')
-            # final_file_name = os.path.join(final_dir_name,worksheet)+".csv"
             try:
                 w_nm = int(worksheet)
                 b_o_nm = os.path.basename(outf).split('.')[0]
@@ -65,7 +63,6 @@ else:
             createCsv(args.inpfile,args.outfile,sheet.name)
     else :
         w_s_name = args.worksheet.split(',')
-        # print(w_s_name)
         for nm in w_s_name:
             createCsv(args.inpfile,args.outfile,nm)
 
