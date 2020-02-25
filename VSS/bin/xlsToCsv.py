@@ -47,7 +47,7 @@ def createCsv(inf,outf,worksheet):
         return True
     except Exception as e:
         print(e)
-        print("WorkSheet",w_nm,"Not Found")
+        print("WorkSheet",worksheet,"Not Found")
         return False
     
 

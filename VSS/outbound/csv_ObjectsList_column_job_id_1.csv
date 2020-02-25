@@ -1,0 +1,7 @@
+OWNER,NAME,TYPE,LINE,TEXT
+SYS,KU$_JOB_T,TYPE,9,"  job_id        number,                                           /* job id  */"
+HR,ADD_JOB_HISTORY,PROCEDURE,5,"   , p_job_id          job_history.job_id%type"
+HR,ADD_JOB_HISTORY,PROCEDURE,11,"                           job_id, department_id)"
+HR,ADD_JOB_HISTORY,PROCEDURE,12,"    VALUES(p_emp_id, p_start_date, p_end_date, p_job_id, p_department_id);"
+HR,UPDATE_JOB_HISTORY,TRIGGER,2,"  AFTER UPDATE OF job_id, department_id ON employees"
+HR,UPDATE_JOB_HISTORY,TRIGGER,6,"                  :old.job_id, :old.department_id);"
