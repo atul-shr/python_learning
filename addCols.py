@@ -14,5 +14,6 @@ for filename in os.listdir(directory):
             with open(directory + '\\' + filename, "w") as output_file:
                 # output_file.write(header)
                 data.to_csv(output_file, index=False,line_terminator="\n")
+            print('Added column in ' +   filename )   
         except:
-            pass
+            print('Failed column in ' +   filename ) 
