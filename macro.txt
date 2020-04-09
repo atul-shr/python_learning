@@ -1,0 +1,23 @@
+Sub LoopThroughFolder()
+
+Dim MyFile As String, Str As String, MyDir As String, Wb As Workbook
+Dim Rws As Long, Rng As Range
+Set Wb = ThisWorkbook
+'change the address to suite
+MyDir = "D:\learning\code\utils\addColumnExcel\" 'Your Directory
+MyFile = Dir(MyDir & "*.xlsx")    'Your excel file extension
+ChDir MyDir
+Application.ScreenUpdating = 0
+Application.DisplayAlerts = 0
+
+Do While MyFile <> ""
+    Set Wb = Workbooks.Open(MyFile)
+    Set WrkSht = Wb.Sheets("Sheet1")
+        WrkSht.Range("D1").EntireColumn.Insert
+        WrkSht.Range("D1").Value = "NewColumn" 'New Column Name
+        ActiveWorkbook.Save
+        ActiveWorkbook.Close True
+    MyFile = Dir()
+Loop
+
+End Sub
