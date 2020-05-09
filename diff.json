@@ -1,0 +1,178 @@
+{
+  "_index": [
+    "OBJECT_ID"
+  ],
+  "added": [
+    {
+      "CREATED": "2014-05-29 13:25:38",
+      "DATA_OBJECT_ID": "",
+      "EDITION_NAME": "",
+      "GENERATED": "N",
+      "LAST_DDL_TIME": "2014-05-29 13:33:27",
+      "NAMESPACE": "1",
+      "OBJECT_ID": "19804",
+      "OBJECT_NAME": "WWV_FLOW_HELP",
+      "OBJECT_TYPE": "PACKAGE",
+      "OWNER": "APEX_040000",
+      "SECONDARY": "N",
+      "STATUS": "VALID",
+      "SUBOBJECT_NAME": "",
+      "TEMPORARY": "N",
+      "TIMESTAMP": "2014-05-29:13:25:38"
+    },
+    {
+      "CREATED": "2014-05-29 13:25:38",
+      "DATA_OBJECT_ID": "",
+      "EDITION_NAME": "",
+      "GENERATED": "N",
+      "LAST_DDL_TIME": "2014-05-29 13:33:52",
+      "NAMESPACE": "1",
+      "OBJECT_ID": "19803",
+      "OBJECT_NAME": "HTMLDB_ADMIN",
+      "OBJECT_TYPE": "PROCEDURE",
+      "OWNER": "APEX_040000",
+      "SECONDARY": "N",
+      "STATUS": "VALID",
+      "SUBOBJECT_NAME": "",
+      "TEMPORARY": "N",
+      "TIMESTAMP": "2014-05-29:13:25:38"
+    },
+    {
+      "CREATED": "2014-05-29 13:25:39",
+      "DATA_OBJECT_ID": "",
+      "EDITION_NAME": "",
+      "GENERATED": "N",
+      "LAST_DDL_TIME": "2014-05-29 13:33:17",
+      "NAMESPACE": "1",
+      "OBJECT_ID": "19813",
+      "OBJECT_NAME": "APEX_UI_DEFAULT_UPDATE",
+      "OBJECT_TYPE": "PACKAGE",
+      "OWNER": "APEX_040000",
+      "SECONDARY": "N",
+      "STATUS": "VALID",
+      "SUBOBJECT_NAME": "",
+      "TEMPORARY": "N",
+      "TIMESTAMP": "2014-05-29:13:25:39"
+    },
+    {
+      "CREATED": "2014-05-29 13:25:39",
+      "DATA_OBJECT_ID": "",
+      "EDITION_NAME": "",
+      "GENERATED": "N",
+      "LAST_DDL_TIME": "2014-05-29 13:33:17",
+      "NAMESPACE": "1",
+      "OBJECT_ID": "19814",
+      "OBJECT_NAME": "APEX_MIG_PROJECTS_UPDATE",
+      "OBJECT_TYPE": "PACKAGE",
+      "OWNER": "APEX_040000",
+      "SECONDARY": "N",
+      "STATUS": "VALID",
+      "SUBOBJECT_NAME": "",
+      "TEMPORARY": "N",
+      "TIMESTAMP": "2014-05-29:13:25:39"
+    }
+  ],
+  "changed": [
+    {
+      "fields": {
+        "STATUS": {
+          "from": "INVALID",
+          "to": "VALID"
+        },
+        "TIMESTAMP": {
+          "from": "2008-04-18:00:00:00",
+          "to": "2006-04-18:00:00:00"
+        }
+      },
+      "key": [
+        "1253"
+      ]
+    },
+    {
+      "fields": {
+        "GENERATED": {
+          "from": "Y",
+          "to": "N"
+        }
+      },
+      "key": [
+        "20067"
+      ]
+    },
+    {
+      "fields": {
+        "OBJECT_TYPE": {
+          "from": "VIEW",
+          "to": "TABLE"
+        }
+      },
+      "key": [
+        "20069"
+      ]
+    },
+    {
+      "fields": {
+        "STATUS": {
+          "from": "VALID",
+          "to": "AA"
+        }
+      },
+      "key": [
+        "365"
+      ]
+    }
+  ],
+  "removed": [
+    {
+      "CREATED": "2014-05-29 13:10:51",
+      "DATA_OBJECT_ID": "",
+      "EDITION_NAME": "",
+      "GENERATED": "N",
+      "LAST_DDL_TIME": "2014-05-29 13:11:24",
+      "NAMESPACE": "1",
+      "OBJECT_ID": "1255",
+      "OBJECT_NAME": "DBMS_STANDARD",
+      "OBJECT_TYPE": "PACKAGE",
+      "OWNER": "SYS",
+      "SECONDARY": "N",
+      "STATUS": "VALID",
+      "SUBOBJECT_NAME": "",
+      "TEMPORARY": "N",
+      "TIMESTAMP": "2014-05-29:13:10:51"
+    },
+    {
+      "CREATED": "2014-05-29 13:10:52",
+      "DATA_OBJECT_ID": "",
+      "EDITION_NAME": "",
+      "GENERATED": "N",
+      "LAST_DDL_TIME": "2014-05-29 13:10:52",
+      "NAMESPACE": "1",
+      "OBJECT_ID": "1256",
+      "OBJECT_NAME": "DBMS_STANDARD",
+      "OBJECT_TYPE": "SYNONYM",
+      "OWNER": "PUBLIC",
+      "SECONDARY": "N",
+      "STATUS": "VALID",
+      "SUBOBJECT_NAME": "",
+      "TEMPORARY": "N",
+      "TIMESTAMP": "2014-05-29:13:10:52"
+    },
+    {
+      "CREATED": "2014-05-29 13:10:52",
+      "DATA_OBJECT_ID": "",
+      "EDITION_NAME": "",
+      "GENERATED": "N",
+      "LAST_DDL_TIME": "2014-05-29 13:18:52",
+      "NAMESPACE": "1",
+      "OBJECT_ID": "1276",
+      "OBJECT_NAME": "ALL_XML_SCHEMAS",
+      "OBJECT_TYPE": "VIEW",
+      "OWNER": "SYS",
+      "SECONDARY": "N",
+      "STATUS": "VALID",
+      "SUBOBJECT_NAME": "",
+      "TEMPORARY": "N",
+      "TIMESTAMP": "2014-05-29:13:18:52"
+    }
+  ]
+}
