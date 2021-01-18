@@ -18,22 +18,29 @@ limit_counter = 0
 
 request_dict = {}
 
-for chunks in pd.read_csv(r"D:\learning\lusid-repo\Source-files\instrument_source_data.csv",header=0,delimiter=",",chunksize=2000):
-    # print(chunks.head())
-    for inner_chunks in chunks.iterrows():
-        # print(inner_chunks[1]['request_id'])
-        # break
-        request_dict[inner_chunks[1]['request_id']] = {}
-        request_dict[inner_chunks[1]['request_id']]["name"] = {}
-        request_dict[inner_chunks[1]['request_id']]["name"] = inner_chunks[1]["instrument_name"]
-        request_dict[inner_chunks[1]['request_id']]["identifiers"] = {}
-        request_dict[inner_chunks[1]['request_id']]["identifiers"][inner_chunks[1]['identifiers_name']] = {}
-        request_dict[inner_chunks[1]['request_id']]["identifiers"][inner_chunks[1]['identifiers_name']]["value"] = {}
-        request_dict[inner_chunks[1]['request_id']]["identifiers"][inner_chunks[1]['identifiers_name']]["value"] = inner_chunks[1]["identifiers_value"]
-    with open(r"D:\learning\lusid-repo\Source-files\instrument_req.json", 'w') as fp:
-        json.dump(request_dict, fp)        
-    response = instruments_api.upsert_instruments(request_body=json.dumps(request_dict))
-    print(len(response.values))
-    request_dict = {}
+instruments = []
+
+all_rec = pd.read_csv(r"D:\learning\lusid-repo\Source-files\instrument_source_data.csv",header=0,delimiter=",")
+    
+for idx, rows in all_rec.iterrows():    
+    print(rows['identifiers_value'])
+    instruments.append({"ClientInternal":rows['identifiers_value'], "Name":rows['instrument_name']})
 
 
+# print(instruments)
+
+
+ClientInternal_to_create = {
+    i["ClientInternal"]:models.InstrumentDefinition(
+        name=i["Name"], 
+        identifiers={"ClientInternal": models.InstrumentIdValue(
+            value=i["ClientInternal"])}
+    ) for i in instruments 
+}
+
+# print(ClientInternal_to_create)
+
+print(datetime.now())
+response = instruments_api.upsert_instruments(request_body=ClientInternal_to_create)
+print(len(response.values))
+print(datetime.now())

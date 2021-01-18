@@ -59,6 +59,14 @@ response = instruments_api.upsert_instruments(request_body={
                 "value": "filInternalId0000001"
             }
         }
+    },
+        "fil_req_id_0000002": {
+        "name": "pocFilInsName0000002",
+        "identifiers": {
+            "ClientInternal": {
+                "value": "filInternalId0000002"
+            }
+        }
     }
 })
 
