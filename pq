@@ -1,0 +1,180 @@
+[1mdiff --git a/code/create_bulk_instruments.py b/code/create_bulk_instruments.py[m
+[1mindex ee08a7f..9d43823 100644[m
+[1m--- a/code/create_bulk_instruments.py[m
+[1m+++ b/code/create_bulk_instruments.py[m
+[36m@@ -18,22 +18,29 @@[m [mlimit_counter = 0[m
+ [m
+ request_dict = {}[m
+ [m
+[31m-for chunks in pd.read_csv(r"D:\learning\lusid-repo\Source-files\instrument_source_data.csv",header=0,delimiter=",",chunksize=2000):[m
+[31m-    # print(chunks.head())[m
+[31m-    for inner_chunks in chunks.iterrows():[m
+[31m-        # print(inner_chunks[1]['request_id'])[m
+[31m-        # break[m
+[31m-        request_dict[inner_chunks[1]['request_id']] = {}[m
+[31m-        request_dict[inner_chunks[1]['request_id']]["name"] = {}[m
+[31m-        request_dict[inner_chunks[1]['request_id']]["name"] = inner_chunks[1]["instrument_name"][m
+[31m-        request_dict[inner_chunks[1]['request_id']]["identifiers"] = {}[m
+[31m-        request_dict[inner_chunks[1]['request_id']]["identifiers"][inner_chunks[1]['identifiers_name']] = {}[m
+[31m-        request_dict[inner_chunks[1]['request_id']]["identifiers"][inner_chunks[1]['identifiers_name']]["value"] = {}[m
+[31m-        request_dict[inner_chunks[1]['request_id']]["identifiers"][inner_chunks[1]['identifiers_name']]["value"] = inner_chunks[1]["identifiers_value"][m
+[31m-    with open(r"D:\learning\lusid-repo\Source-files\instrument_req.json", 'w') as fp:[m
+[31m-        json.dump(request_dict, fp)        [m
+[31m-    response = instruments_api.upsert_instruments(request_body=json.dumps(request_dict))[m
+[31m-    print(len(response.values))[m
+[31m-    request_dict = {}[m
+[32m+[m[32minstruments = [][m
+ [m
+[32m+[m[32mall_rec = pd.read_csv(r"D:\learning\lusid-repo\Source-files\instrument_source_data.csv",header=0,delimiter=",")[m
+[32m+[m[41m    [m
+[32m+[m[32mfor idx, rows in all_rec.iterrows():[m[41m    [m
+[32m+[m[32m    print(rows['identifiers_value'])[m
+[32m+[m[32m    instruments.append({"ClientInternal":rows['identifiers_value'], "Name":rows['instrument_name']})[m
+ [m
+[32m+[m
+[32m+[m[32m# print(instruments)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mClientInternal_to_create = {[m
+[32m+[m[32m    i["ClientInternal"]:models.InstrumentDefinition([m
+[32m+[m[32m        name=i["Name"],[m[41m [m
+[32m+[m[32m        identifiers={"ClientInternal": models.InstrumentIdValue([m
+[32m+[m[32m            value=i["ClientInternal"])}[m
+[32m+[m[32m    ) for i in instruments[m[41m [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m# print(ClientInternal_to_create)[m
+[32m+[m
+[32m+[m[32mprint(datetime.now())[m
+[32m+[m[32mresponse = instruments_api.upsert_instruments(request_body=ClientInternal_to_create)[m
+[32m+[m[32mprint(len(response.values))[m
+[32m+[m[32mprint(datetime.now())[m
+[1mdiff --git a/code/get_bulk_ins.py b/code/get_bulk_ins.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..06a6d88[m
+[1m--- /dev/null[m
+[1m+++ b/code/get_bulk_ins.py[m
+[36m@@ -0,0 +1,64 @@[m
+[32m+[m[32mfrom datetime import datetime[m
+[32m+[m[32mimport pytz[m
+[32m+[m[32mimport threading[m
+[32m+[m[32mimport uuid[m
+[32m+[m[32mimport pandas as pd[m
+[32m+[m[32mimport lusid[m
+[32m+[m[32mimport lusid.models as models[m
+[32m+[m[32mfrom lusid.utilities import ApiClientBuilder[m
+[32m+[m[32mimport json[m[41m [m
+[32m+[m[32mfrom collections import namedtuple[m[41m  [m
+[32m+[m
+[32m+[m[32mapi_client = ApiClientBuilder().build(r"D:\learning\lusid-repo\lusid-sdk-python-preview\sdk\tests\secrets.json")[m
+[32m+[m
+[32m+[m[32mprint(api_client)[m
+[32m+[m
+[32m+[m[32minstruments_api = lusid.InstrumentsApi(api_client)[m
+[32m+[m
+[32m+[m[32minstruments = [][m
+[32m+[m[32mLUSID_INSTRUMENT_IDENTIFIER = "Instrument/default/LusidInstrumentId"[m
+[32m+[m
+[32m+[m[32mall_rec = pd.read_csv(r"D:\learning\lusid-repo\Source-files\instrument_source_data.csv",header=0,delimiter=",")[m
+[32m+[m[41m    [m
+[32m+[m[32mfor idx, rows in all_rec.iterrows():[m[41m    [m
+[32m+[m[32m    # print(rows['identifiers_value'])[m
+[32m+[m[32m    instruments.append({"ClientInternal":rows['identifiers_value'], "Name":rows['instrument_name']})[m
+[32m+[m
+[32m+[m[32mdef build_transaction(trade_spec):[m
+[32m+[m[32m    return models.TransactionRequest([m
+[32m+[m[32m        transaction_id=str(uuid.uuid4()),[m
+[32m+[m[32m        type="StockIn",[m
+[32m+[m[32m        instrument_identifiers={[m
+[32m+[m[32m            LUSID_INSTRUMENT_IDENTIFIER: trade_spec.id[m
+[32m+[m[32m        },[m
+[32m+[m[32m        transaction_date=trade_spec.trade_date,[m
+[32m+[m[32m        settlement_date=trade_spec.trade_date,[m
+[32m+[m[32m        units=100,[m
+[32m+[m[32m        transaction_price=models.TransactionPrice([m
+[32m+[m[32m            price=trade_spec.price),[m
+[32m+[m[32m        total_consideration=models.CurrencyAndAmount([m
+[32m+[m[32m            amount=100 * trade_spec.price,[m[41m [m
+[32m+[m[32m            currency="GBP"),[m
+[32m+[m[32m        source="Client"[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32mids = instruments_api.get_instruments([m
+[32m+[m[32m    identifier_type="ClientInternal",[m[41m [m
+[32m+[m[32m    request_body=[i["ClientInternal"] for i in instruments][m
+[32m+[m[32m)[m
+[32m+[m
+[32m+[m[32minstrument_ids = [i.lusid_instrument_id for i in ids.values.values()][m
+[32m+[m
+[32m+[m[32m# print(instrument_ids)[m
+[32m+[m
+[32m+[m[32mTransactionSpec = namedtuple('TradeSpec', 'id price trade_date')[m
+[32m+[m[32mtrade_specs = [[m
+[32m+[m[32m    TransactionSpec(instrument_ids[0], 101, datetime(2018, 1, 1, tzinfo=pytz.utc)),[m
+[32m+[m[32m    TransactionSpec(instrument_ids[1], 102, datetime(2018, 1, 2, tzinfo=pytz.utc)),[m
+[32m+[m[32m    TransactionSpec(instrument_ids[2], 103, datetime(2018, 1, 3, tzinfo=pytz.utc))[m
+[32m+[m[32m][m
+[32m+[m[32mtrade_specs.sort(key=lambda ts: ts.id)[m
+[32m+[m
+[32m+[m[32mnew_transactions = list(map(build_transaction, trade_specs))[m
+[32m+[m
+[32m+[m[32mprint(new_transactions)[m
+\ No newline at end of file[m
+[1mdiff --git a/code/sample_ins_req.sql b/code/sample_ins_req.sql[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ec4d575[m
+[1m--- /dev/null[m
+[1m+++ b/code/sample_ins_req.sql[m
+[36m@@ -0,0 +1,28 @@[m
+[32m+[m[32m# create instruments[m
+[32m+[m[32minstruments = [[m
+[32m+[m[32m    {"Figi": "BBG000C6K6G9", "Name": "VODAFONE GROUP PLC"},[m
+[32m+[m[32m    {"Figi": "BBG000C04D57", "Name": "BARCLAYS PLC"},[m
+[32m+[m[32m    {"Figi": "BBG000FV67Q4", "Name": "NATIONAL GRID PLC"},[m
+[32m+[m[32m    {"Figi": "BBG000BF0KW3", "Name": "SAINSBURY (J) PLC"},[m
+[32m+[m[32m    {"Figi": "BBG000BF4KL1", "Name": "TAYLOR WIMPEY PLC"}[m
+[32m+[m[32m][m
+[32m+[m
+[32m+[m[32mfigis_to_create = {[m
+[32m+[m[32m    i["Figi"]:models.InstrumentDefinition([m
+[32m+[m[32m        name=i["Name"],[m[41m [m
+[32m+[m[32m        identifiers={"Figi": models.InstrumentIdValue([m
+[32m+[m[32m            value=i["Figi"])}[m
+[32m+[m[32m    ) for i in instruments[m[41m [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mupsert_response = api_factory.build(lusid.api.InstrumentsApi).upsert_instruments(request_body=figis_to_create)[m
+[32m+[m
+[32m+[m[32mif len(upsert_response.failed) != 0:[m
+[32m+[m[32m    raise Exception(upsert_response.failed)[m
+[32m+[m
+[32m+[m[32mids = api_factory.build(lusid.api.InstrumentsApi).get_instruments([m
+[32m+[m[32m    identifier_type="Figi",[m[41m [m
+[32m+[m[32m    request_body=[i["Figi"] for i in instruments][m
+[32m+[m[32m)[m
+[32m+[m
+[32m+[m[32minstrument_ids = [i.lusid_instrument_id for i in ids.values.values()][m
+\ No newline at end of file[m
+[1mdiff --git a/code/test_connection.py b/code/test_connection.py[m
+[1mindex 83c208b..5f1f0a6 100644[m
+[1m--- a/code/test_connection.py[m
+[1m+++ b/code/test_connection.py[m
+[36m@@ -59,6 +59,14 @@[m [mresponse = instruments_api.upsert_instruments(request_body={[m
+                 "value": "filInternalId0000001"[m
+             }[m
+         }[m
+[32m+[m[32m    },[m
+[32m+[m[32m        "fil_req_id_0000002": {[m
+[32m+[m[32m        "name": "pocFilInsName0000002",[m
+[32m+[m[32m        "identifiers": {[m
+[32m+[m[32m            "ClientInternal": {[m
+[32m+[m[32m                "value": "filInternalId0000002"[m
+[32m+[m[32m            }[m
+[32m+[m[32m        }[m
+     }[m
+ })[m
+ [m
+[1mdiff --git a/pics/10k_ins_create.PNG b/pics/10k_ins_create.PNG[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c404a57[m
+Binary files /dev/null and b/pics/10k_ins_create.PNG differ
