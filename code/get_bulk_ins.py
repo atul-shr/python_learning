@@ -69,40 +69,40 @@ req_code = "source1-filpoc-X001"
 
 req_scope="cut1-filpoc-9999"
 
-# # add initial batch of trades
-# initial_result = transaction_portfolios_api.upsert_transactions(
-#     scope=req_scope, 
-#     code=req_code, 
-#     transaction_request=new_transactions)
+# add initial batch of trades
+initial_result = transaction_portfolios_api.upsert_transactions(
+    scope=req_scope, 
+    code=req_code, 
+    transaction_request=new_transactions)
 
-# as_at_batch1 = initial_result.version.as_at_date
+as_at_batch1 = initial_result.version.as_at_date
 
-# # add trade for 2018-1-8
-# trade = build_transaction(TransactionSpec(instrument_ids[3], 104, datetime(2018, 1, 8, tzinfo=pytz.utc)))
-# later_trade = transaction_portfolios_api.upsert_transactions(
-#     scope=req_scope, 
-#     code=req_code,  
-#     transaction_request=[trade])
+# add trade for 2018-1-8
+trade = build_transaction(TransactionSpec(instrument_ids[3], 104, datetime(2018, 1, 8, tzinfo=pytz.utc)))
+later_trade = transaction_portfolios_api.upsert_transactions(
+    scope=req_scope, 
+    code=req_code,  
+    transaction_request=[trade])
 
-# as_at_batch2 = later_trade.version.as_at_date
-# print(as_at_batch2)
+as_at_batch2 = later_trade.version.as_at_date
+print(as_at_batch2)
 
-# # add back dated trade
-# trade = build_transaction(TransactionSpec(instrument_ids[4], 105, datetime(2018, 1, 5, tzinfo=pytz.utc)))
-# backdated_trade = transaction_portfolios_api.upsert_transactions(
-#     scope=req_scope, 
-#     code=req_code, 
-#     transaction_request=[trade])
+# add back dated trade
+trade = build_transaction(TransactionSpec(instrument_ids[4], 105, datetime(2018, 1, 5, tzinfo=pytz.utc)))
+backdated_trade = transaction_portfolios_api.upsert_transactions(
+    scope=req_scope, 
+    code=req_code, 
+    transaction_request=[trade])
 
-# as_at_batch3 = backdated_trade.version.as_at_date
-# print(as_at_batch3)
+as_at_batch3 = backdated_trade.version.as_at_date
+print(as_at_batch3)
 
-# # add back dated trade
-# trade = build_transaction(TransactionSpec(instrument_ids[4], 105, datetime(2018, 1, 5, tzinfo=pytz.utc)))
-# backdated_trade = transaction_portfolios_api.upsert_transactions(
-#     scope=req_scope, 
-#     code=req_code, 
-#     transaction_request=[trade])
+# add back dated trade
+trade = build_transaction(TransactionSpec(instrument_ids[4], 105, datetime(2018, 1, 5, tzinfo=pytz.utc)))
+backdated_trade = transaction_portfolios_api.upsert_transactions(
+    scope=req_scope, 
+    code=req_code, 
+    transaction_request=[trade])
 
-# as_at_batch3 = backdated_trade.version.as_at_date
-# print(as_at_batch3)
+as_at_batch3 = backdated_trade.version.as_at_date
+print(as_at_batch3)
