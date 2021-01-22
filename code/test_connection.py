@@ -6,6 +6,7 @@ import uuid
 import lusid
 import lusid.models as models
 from lusid.utilities import ApiClientBuilder
+from lusid.exceptions import ApiException
 
 api_client = ApiClientBuilder().build(r"D:\learning\lusid-repo\lusid-sdk-python-preview\sdk\tests\secrets.json")
 
@@ -15,7 +16,6 @@ instruments_api = lusid.InstrumentsApi(api_client)
 property_definitions_api = lusid.PropertyDefinitionsApi(api_client)
 portfolio_api = lusid.PortfoliosApi(api_client)
 transaction_portfolios_api = lusid.TransactionPortfoliosApi(api_client)
-
 
 # # details of the new portfolio to be created, created here with the minimum set of mandatory fields
 # request = models.CreateTransactionPortfolioRequest(
@@ -51,25 +51,63 @@ transaction_portfolios_api = lusid.TransactionPortfoliosApi(api_client)
 #                                                             }
 # )
 
-response = instruments_api.upsert_instruments(request_body={
-    "fil_req_id_0000001": {
-        "name": "pocFilInsName0000001",
-        "identifiers": {
-            "ClientInternal": {
-                "value": "filInternalId0000001"
-            }
-        }
-    },
-        "fil_req_id_0000002": {
-        "name": "pocFilInsName0000002",
-        "identifiers": {
-            "ClientInternal": {
-                "value": "filInternalId0000002"
-            }
-        }
-    }
-})
+# response = instruments_api.upsert_instruments_properties(upsert_instrument_property_request={
+#     "identifierType": "LusidInstrumentId",
+#     "identifier": "LUID_L7YRVZYK",
+#     "properties": [
+#         {
+#             "key": "Instrument/filInsScope/Instrument_Country",
+#             "value": {
+#                 "labelValue": "UK"
+#             },
+#             "effectiveFrom": "2018-03-05T12:00:00.0000000+00:00"
+#         }
+#     ]
+# })
 
+try:
+    property_definitions_api.get_property_definition(
+        domain="Instrument",
+        scope="filInsScope",
+        code="exchange"
+    )
+except ApiException as e:
+    # property definition doesn't exist (returns 404), so create one
+    # domain=None, scope=None, code=None, value_required=None, display_name=None, data_type_id=None, life_time=None, constraint_style=None, property_description=None
+    property_definition = models.CreatePropertyDefinitionRequest(
+        domain="Instrument",
+        scope="filInsScope",
+        life_time="Perpetual",
+        code="exchange",
+        display_name="exchange",
+        value_required=False,
+        data_type_id=models.ResourceId("system", "string"),
+        constraint_style=None, property_description=None
+    )
+
+    # create the property
+    property_definitions_api.create_property_definition(create_property_definition_request=property_definition)
+
+property_value = models.PropertyValue(label_value="LSE")
+property_key = f"Instrument/filInsScope/exchange"
+identifier_type = "LusidInstrumentId"
+identifier = "LUID_L7YRVZYK"
+
+# update the instrument
+response = instruments_api.upsert_instruments_properties(upsert_instrument_property_request=[
+    models.UpsertInstrumentPropertyRequest(
+        identifier_type=identifier_type,
+        identifier=identifier,
+        properties=[models.ModelProperty(key=property_key, value=property_value)]
+    )
+])
+
+# # get the instrument with value
+# instrument = self.instruments_api.get_instrument(
+#     identifier_type=identifier_type,
+#     identifier=identifier,
+#     property_keys=[property_key]
+# )
 
 # response = instruments_api.get_instrument_identifier_types()
 
