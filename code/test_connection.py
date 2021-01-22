@@ -65,42 +65,41 @@ transaction_portfolios_api = lusid.TransactionPortfoliosApi(api_client)
 #     ]
 # })
 
-try:
-    property_definitions_api.get_property_definition(
-        domain="Instrument",
-        scope="filInsScope",
-        code="exchange"
-    )
-except ApiException as e:
-    # property definition doesn't exist (returns 404), so create one
-    # domain=None, scope=None, code=None, value_required=None, display_name=None, data_type_id=None, life_time=None, constraint_style=None, property_description=None
-    property_definition = models.CreatePropertyDefinitionRequest(
-        domain="Instrument",
-        scope="filInsScope",
-        life_time="Perpetual",
-        code="exchange",
-        display_name="exchange",
-        value_required=False,
-        data_type_id=models.ResourceId("system", "string"),
-        constraint_style=None, property_description=None
-    )
-
-    # create the property
-    property_definitions_api.create_property_definition(create_property_definition_request=property_definition)
-
-property_value = models.PropertyValue(label_value="LSE")
-property_key = f"Instrument/filInsScope/exchange"
-identifier_type = "LusidInstrumentId"
-identifier = "LUID_L7YRVZYK"
-
-# update the instrument
-response = instruments_api.upsert_instruments_properties(upsert_instrument_property_request=[
-    models.UpsertInstrumentPropertyRequest(
-        identifier_type=identifier_type,
-        identifier=identifier,
-        properties=[models.ModelProperty(key=property_key, value=property_value)]
-    )
-])
+# try:
+#     property_definitions_api.get_property_definition(
+#         domain="Instrument",
+#         scope="filInsScope",
+#         code="Instrument_Country"
+#     )
+# except ApiException as e:
+#     # property definition doesn't exist (returns 404), so create one
+#     property_definition = models.CreatePropertyDefinitionRequest(
+#         domain="Instrument",
+#         scope="filInsScope",
+#         life_time="Perpetual",
+#         code="Instrument_Country",
+#         display_name="Instrument_Country",
+#         value_required=False,
+#         data_type_id=models.ResourceId("system", "string"),
+#         constraint_style=None, property_description=None
+#     )
+#
+#     # create the property
+#     property_definitions_api.create_property_definition(create_property_definition_request=property_definition)
+#
+# property_value = models.PropertyValue(label_value="UK")
+# property_key = f"Instrument/filInsScope/Instrument_Country"
+# identifier_type = "LusidInstrumentId"
+# identifier = "LUID_L7YRVZYK"
+#
+# # update the instrument
+# response = instruments_api.upsert_instruments_properties(upsert_instrument_property_request=[
+#     models.UpsertInstrumentPropertyRequest(
+#         identifier_type=identifier_type,
+#         identifier=identifier,
+#         properties=[models.ModelProperty(key=property_key, value=property_value)]
+#     )
+# ])
 
 # # get the instrument with value
 # instrument = self.instruments_api.get_instrument(
@@ -116,7 +115,22 @@ page_size = 5
 # list the instruments, restricting the number that are returned
 # instruments = instruments_api.list_instruments(limit=page_size)
 
+property_key = f"Instrument/filInsScope/Instrument_Country"
+property_key1 = f"Instrument/filInsScope/exchange"
+identifier_type = "LusidInstrumentId"
+identifier = "LUID_L7YRVZYK"
+
+# get the instrument with value
+response = instruments_api.get_instrument(
+    identifier_type=identifier_type,
+    identifier=identifier,
+    property_keys=[property_key,property_key1],
+    as_at="2021-01-22T07:02:35.0000000+00:00"
+)
+
+
 print(response)
+
 
 # print(instruments) #limit=page_size
 
