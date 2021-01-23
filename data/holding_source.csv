@@ -1,0 +1,9 @@
+portfolio_id,security_id,holding_date,holding_source,data_cut,units,cost,portfolio_cost,price,purchase_date,settlement_date
+portfolio_id_1,filInternalId0000001,22-01-2021,source_1,cut_1,100,30,60,20,22-01-2021,25-01-2021
+portfolio_id_1,filInternalId0000002,22-01-2021,source_1,cut_1,101,32,60,20,22-01-2021,25-01-2021
+portfolio_id_1,filInternalId0000003,22-01-2021,source_1,cut_1,102,34,60,20,22-01-2021,25-01-2021
+portfolio_id_1,filInternalId0000004,22-01-2021,source_1,cut_1,103,36,60,20,22-01-2021,25-01-2021
+portfolio_id_1,filInternalId0000005,22-01-2021,source_1,cut_1,104,38,60,20,22-01-2021,25-01-2021
+portfolio_id_1,filInternalId0000006,22-01-2021,source_1,cut_1,105,40,60,20,22-01-2021,25-01-2021
+portfolio_id_1,filInternalId0000007,22-01-2021,source_1,cut_1,106,42,60,20,22-01-2021,25-01-2021
+portfolio_id_1,filInternalId0000008,22-01-2021,source_1,cut_1,107,44,60,20,22-01-2021,25-01-2021

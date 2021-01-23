@@ -16,11 +16,11 @@ print(api_client)
 # portfolio_api = lusid.PortfoliosApi(api_client)
 transaction_portfolios_api = lusid.TransactionPortfoliosApi(api_client)
 
-port_df = pd.read_csv(r"D:\learning\lusid-repo\Source-files\portfolio_source_data.csv",header=0,delimiter=",")
+# port_df = pd.read_csv(r"D:\learning\lusid-repo\Source-files\portfolio_source_data.csv",header=0,delimiter=",")
 
 # print(port_df)
 
-scope_port = "cut1-filpoc-9999"
+scope_port = "filSource1"
 
 print(datetime.now())
 
@@ -50,8 +50,8 @@ guid = str(uuid.uuid4())
 effective_date = datetime(2018, 1, 1, tzinfo=pytz.utc)
 
 request = models.CreateTransactionPortfolioRequest(
-    display_name="portfolio-filpoc-X001",
-    code="source1-filpoc-X001",
+    display_name="portfolio_id_2",
+    code="portfolio_id_2",
     base_currency="GBP",
     created=effective_date
 )
