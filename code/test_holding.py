@@ -89,7 +89,7 @@ hold_req = [
 
 req_code = "portfolio_id_1"
 
-req_scope = "filSource1"
+req_scope = "filSource2"
 
 # res_prop = property_definitions_api.get_property_definition(
 #     domain="Holding",
@@ -100,7 +100,11 @@ req_scope = "filSource1"
 #
 # print(res_prop)
 
-day1 = datetime(2021, 1, 22, tzinfo=pytz.utc)
+# day1 = datetime(2021, 1, 22, tzinfo=pytz.utc)
+
+# yyyy-MM-ddTHH:mm:ss.FFFFFFFK
+
+day1 = "2021-01-22NFIL_Cut1"
 
 # set the initial holdings on day 1
 response = transaction_portfolios_api.set_holdings(scope=req_scope,
