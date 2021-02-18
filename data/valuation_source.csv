@@ -1,9 +1,4 @@
 portfolio_id,val_date,source,cut,base_currency,class_level,total_net_assets,nav_per_share,shares_outstanding,market_value_assets
-portfolio_id_101,14-01-2021,Source1,FIL_Cut1,USD,TF,1010101,135,7538.067164,135353534
-portfolio_id_101,14-01-2021,Source1,FIL_Cut1,USD,10,1013562,555,1787.587302,574689654
-portfolio_id_101,14-01-2021,Source1,FIL_Cut1,USD,12,89789101,965,103922.5706,77577783264
-portfolio_id_101,14-01-2021,Source1,FIL_Cut2,USD,TF,24350101,456,24771.2116,23936149283
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
+portfolio_id_201,14-01-2021,Source1,FIL_Cut3,USD,TF,556655,654,7538.067164,135353534
+portfolio_id_301,14-01-2021,Source1,FIL_Cut1,USD,10,1013562,567,1787.587302,574689654
+portfolio_id_301,14-01-2021,Source1,FIL_Cut1,USD,12,89789101,554,103922.5706,77577783264

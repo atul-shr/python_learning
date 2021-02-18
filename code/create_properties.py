@@ -19,18 +19,18 @@ transaction_portfolios_api = lusid.TransactionPortfoliosApi(api_client)
 
 try:
     property_definitions_api.get_property_definition(
-        domain="Holding",
+        domain="Portfolio",
         scope="filSource1",
-        code="data_cut"
+        code="total_net_assets"
     )
 except ApiException as e:
     # property definition doesn't exist (returns 404), so create one
     property_definition = models.CreatePropertyDefinitionRequest(
-        domain="Holding",
+        domain="Portfolio",
         scope="filSource1",
-        life_time="Perpetual",
-        code="data_cut",
-        display_name="data_cut",
+        life_time="TimeVariant",
+        code="total_net_assets",
+        display_name="total_net_assets",
         value_required=False,
         data_type_id=models.ResourceId("system", "string"),
         constraint_style=None, property_description=None

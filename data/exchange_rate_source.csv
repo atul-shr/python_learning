@@ -1,0 +1,13 @@
+from_currency,to_currency,type_code,source,effective_date,rate
+JPY,GBP,spot,Source1,2021-01-13,0.006364573
+USD,GBP,spot,Source1,2021-01-13,0.8634536
+GBP,EUR,spot,Source1,2021-01-13,1.346
+JPY,GBP,spot,Source2,2021-01-13,0.006364573
+USD,GBP,spot,Source2,2021-01-13,0.8634536
+GBP,EUR,spot,Source2,2021-01-13,1.346
+JPY,GBP,forward,Source3,2021-01-14,0.006364573
+USD,GBP,forward,Source3,2021-01-14,0.8634536
+GBP,EUR,forward,Source3,2021-01-14,1.346
+JPY,GBP,spot,Source4,2021-01-15,0.006364573
+USD,GBP,spot,Source4,2021-01-15,0.8634536
+GBP,EUR,spot,Source4,2021-01-15,1.346

@@ -40,14 +40,16 @@ val_df = \
 val_df["port_code"] = val_df["portfolio_id"] + "_" + val_df["class_level"]
 
 val_mapping = {
-    "property_columns": ["cut", "class_level", "total_net_assets", "nav_per_share", "shares_outstanding", "market_value_assets"],
+    "property_columns": ["val_date", "cut", "class_level", "total_net_assets", "nav_per_share", "shares_outstanding",
+                         "market_value_assets"],
     "properties_scope": "filSource1",
     "portfolio_scope": "source",
     "required": {
         "code": "port_code",
         "display_name": "port_code",
         "base_currency": "base_currency",
-    }
+    },
+    "optional": {"created": "$2020-01-01T00:00:00+00:00"}
 }
 
 result = load_from_data_frame(
@@ -55,7 +57,7 @@ result = load_from_data_frame(
     scope=val_mapping["portfolio_scope"],
     data_frame=val_df,
     mapping_required=val_mapping["required"],
-    mapping_optional={},
+    mapping_optional=val_mapping["optional"],
     file_type="portfolios",
     # identifier_mapping=val_mapping["identifier_mapping"],
     property_columns=val_mapping["property_columns"],

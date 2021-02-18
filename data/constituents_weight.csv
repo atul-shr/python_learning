@@ -1,0 +1,5 @@
+effective_date,identifiers_value,weight_type,period_count,period_type,weight,currency
+2021-02-15,filInternalIdRef0001,Periodical,1,Daily,0.6,GBP
+2021-02-15,filInternalIdRef0002,Periodical,1,Daily,0.4,GBP
+2021-02-16,filInternalIdRef0001,Periodical,1,Daily,0.3,GBP
+2021-02-16,filInternalIdRef0002,Periodical,1,Daily,0.7,GBP
