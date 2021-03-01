@@ -8,6 +8,7 @@ import pandas as pd
 import lusid
 import lusid.models as models
 from lusid.utilities import ApiClientBuilder
+from lusid.utilities import ApiConfiguration
 import json
 import os
 
@@ -22,17 +23,25 @@ os.environ['FBN_USERNAME']=data["api"]["username"]
 os.environ['FBN_PASSWORD']=data["api"]["password"]
 os.environ['FBN_APP_NAME']=data["api"]["applicationName"]
 
-print(os.environ['FBN_LUSID_API_URL'])
-print(os.environ['FBN_TOKEN_URL'])
-print(os.environ['FBN_CLIENT_ID'])
-print(os.environ['FBN_CLIENT_SECRET'])
-print(os.environ['FBN_USERNAME'])
-print(os.environ['FBN_PASSWORD'])
+# print(os.environ['FBN_LUSID_API_URL'])
+# print(os.environ['FBN_TOKEN_URL'])
+# print(os.environ['FBN_CLIENT_ID'])
+# print(os.environ['FBN_CLIENT_SECRET'])
+# print(os.environ['FBN_USERNAME'])
+# print(os.environ['FBN_PASSWORD'])
 
 session = boto3.session.Session()
 client = session.client(service_name='secretsmanager')
 
-api_client = ApiClientBuilder().build()
+api_secrets = ApiConfiguration(token_url=data["api"]["tokenUrl"], 
+                  api_url=data["api"]["apiUrl"], 
+                  username=data["api"]["username"], 
+                  password=data["api"]["password"], 
+                  client_id=data["api"]["clientId"], 
+                  client_secret=data["api"]["clientSecret"],
+                  app_name=data["api"]["applicationName"])
+
+api_client = ApiClientBuilder().build(api_configuration=api_secrets)
 
 print(api_client)
 
