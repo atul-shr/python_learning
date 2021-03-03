@@ -1,0 +1,117 @@
+{
+  "Resources": {
+    "managedcomputebatchlusidpocEcsInstanceRoleDFA77143": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ec2.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-batch-poc/managed_compute_batch_lusid_poc/Ecs-Instance-Role/Resource"
+      }
+    },
+    "managedcomputebatchlusidpocInstanceProfile5A385086": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Roles": [
+          {
+            "Ref": "managedcomputebatchlusidpocEcsInstanceRoleDFA77143"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-batch-poc/managed_compute_batch_lusid_poc/Instance-Profile"
+      }
+    },
+    "managedcomputebatchlusidpocResourceSecurityGroupC9FA77BE": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "aws-batch-poc/managed_compute_batch_lusid_poc/Resource-Security-Group",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "VpcId": "vpc-d22ed2b9"
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-batch-poc/managed_compute_batch_lusid_poc/Resource-Security-Group/Resource"
+      }
+    },
+    "managedcomputebatchlusidpocC6BDB814": {
+      "Type": "AWS::Batch::ComputeEnvironment",
+      "Properties": {
+        "ServiceRole": "arn:aws:iam::340444537094:role/POC_LUSID_BATCH_SR",
+        "Type": "MANAGED",
+        "ComputeEnvironmentName": "managed_compute_batch_lusid_poc",
+        "ComputeResources": {
+          "AllocationStrategy": "BEST_FIT",
+          "InstanceRole": {
+            "Fn::GetAtt": [
+              "managedcomputebatchlusidpocInstanceProfile5A385086",
+              "Arn"
+            ]
+          },
+          "InstanceTypes": [
+            "optimal"
+          ],
+          "MaxvCpus": 256,
+          "MinvCpus": 0,
+          "SecurityGroupIds": [
+            {
+              "Fn::GetAtt": [
+                "managedcomputebatchlusidpocResourceSecurityGroupC9FA77BE",
+                "GroupId"
+              ]
+            }
+          ],
+          "Subnets": [
+            "subnet-5bd73230",
+            "subnet-582e6414",
+            "subnet-3719844c"
+          ],
+          "Type": "EC2"
+        },
+        "State": "DISABLED"
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-batch-poc/managed_compute_batch_lusid_poc/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Modules": "aws-cdk=1.91.0,@aws-cdk/assets=1.91.0,@aws-cdk/aws-apigateway=1.91.0,@aws-cdk/aws-apigatewayv2=1.91.0,@aws-cdk/aws-applicationautoscaling=1.91.0,@aws-cdk/aws-autoscaling=1.91.0,@aws-cdk/aws-autoscaling-common=1.91.0,@aws-cdk/aws-autoscaling-hooktargets=1.91.0,@aws-cdk/aws-batch=1.91.0,@aws-cdk/aws-certificatemanager=1.91.0,@aws-cdk/aws-cloudformation=1.91.0,@aws-cdk/aws-cloudfront=1.91.0,@aws-cdk/aws-cloudwatch=1.91.0,@aws-cdk/aws-codeguruprofiler=1.91.0,@aws-cdk/aws-cognito=1.91.0,@aws-cdk/aws-ec2=1.91.0,@aws-cdk/aws-ecr=1.91.0,@aws-cdk/aws-ecr-assets=1.91.0,@aws-cdk/aws-ecs=1.91.0,@aws-cdk/aws-efs=1.91.0,@aws-cdk/aws-elasticloadbalancing=1.91.0,@aws-cdk/aws-elasticloadbalancingv2=1.91.0,@aws-cdk/aws-events=1.91.0,@aws-cdk/aws-iam=1.91.0,@aws-cdk/aws-kms=1.91.0,@aws-cdk/aws-lambda=1.91.0,@aws-cdk/aws-logs=1.91.0,@aws-cdk/aws-route53=1.91.0,@aws-cdk/aws-route53-targets=1.91.0,@aws-cdk/aws-s3=1.91.0,@aws-cdk/aws-s3-assets=1.91.0,@aws-cdk/aws-sam=1.91.0,@aws-cdk/aws-secretsmanager=1.91.0,@aws-cdk/aws-servicediscovery=1.91.0,@aws-cdk/aws-sns=1.91.0,@aws-cdk/aws-sns-subscriptions=1.91.0,@aws-cdk/aws-sqs=1.91.0,@aws-cdk/aws-ssm=1.91.0,@aws-cdk/cloud-assembly-schema=1.91.0,@aws-cdk/core=1.91.0,@aws-cdk/custom-resources=1.91.0,@aws-cdk/cx-api=1.91.0,@aws-cdk/region-info=1.91.0,jsii-runtime=Python/3.7.9"
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-batch-poc/CDKMetadata/Default"
+      }
+    }
+  }
+}

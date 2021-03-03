@@ -1,0 +1,108 @@
+{
+  "version": "9.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "aws-batch-poc": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "aws-batch-poc.template.json"
+      },
+      "metadata": {
+        "/aws-batch-poc/vpc-d22ed2b9": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcd22ed2b9",
+            "trace": [
+              "obj._wrapSandboxCode (/tmp/tmpgiwbeo7z/lib/program.js:2720:58)",
+              "Kernel._wrapSandboxCode (/tmp/tmpgiwbeo7z/lib/program.js:3148:24)",
+              "Kernel._create (/tmp/tmpgiwbeo7z/lib/program.js:2720:34)",
+              "Kernel.create (/tmp/tmpgiwbeo7z/lib/program.js:2461:29)",
+              "KernelHost.processRequest (/tmp/tmpgiwbeo7z/lib/program.js:9457:36)",
+              "KernelHost.run (/tmp/tmpgiwbeo7z/lib/program.js:9420:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpgiwbeo7z/lib/program.js:9421:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/aws-batch-poc/managed_compute_batch_lusid_poc": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "managedcomputebatchlusidpoc",
+            "trace": [
+              "obj._wrapSandboxCode (/tmp/tmpgiwbeo7z/lib/program.js:2720:58)",
+              "Kernel._wrapSandboxCode (/tmp/tmpgiwbeo7z/lib/program.js:3148:24)",
+              "Kernel._create (/tmp/tmpgiwbeo7z/lib/program.js:2720:34)",
+              "Kernel.create (/tmp/tmpgiwbeo7z/lib/program.js:2461:29)",
+              "KernelHost.processRequest (/tmp/tmpgiwbeo7z/lib/program.js:9457:36)",
+              "KernelHost.run (/tmp/tmpgiwbeo7z/lib/program.js:9420:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpgiwbeo7z/lib/program.js:9421:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/aws-batch-poc/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-GkILnI/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "construct (/tmp/jsii-kernel-GkILnI/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:9)",
+              "visit (/tmp/jsii-kernel-GkILnI/node_modules/@aws-cdk/core/lib/private/synthesis.js:184:9)",
+              "visit (/tmp/jsii-kernel-GkILnI/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-GkILnI/node_modules/@aws-cdk/core/lib/private/synthesis.js:117:5)",
+              "Object.synthesize (/tmp/jsii-kernel-GkILnI/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-GkILnI/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "_wrapSandboxCode (/tmp/tmpgiwbeo7z/lib/program.js:2536:134)",
+              "Kernel._wrapSandboxCode (/tmp/tmpgiwbeo7z/lib/program.js:3148:24)",
+              "ret._ensureSync (/tmp/tmpgiwbeo7z/lib/program.js:2536:107)",
+              "Kernel._ensureSync (/tmp/tmpgiwbeo7z/lib/program.js:3129:28)",
+              "Kernel.invoke (/tmp/tmpgiwbeo7z/lib/program.js:2536:34)",
+              "KernelHost.processRequest (/tmp/tmpgiwbeo7z/lib/program.js:9457:36)",
+              "KernelHost.run (/tmp/tmpgiwbeo7z/lib/program.js:9420:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpgiwbeo7z/lib/program.js:9421:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/aws-batch-poc/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-GkILnI/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+              "construct (/tmp/jsii-kernel-GkILnI/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:9)",
+              "visit (/tmp/jsii-kernel-GkILnI/node_modules/@aws-cdk/core/lib/private/synthesis.js:184:9)",
+              "visit (/tmp/jsii-kernel-GkILnI/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-GkILnI/node_modules/@aws-cdk/core/lib/private/synthesis.js:117:5)",
+              "Object.synthesize (/tmp/jsii-kernel-GkILnI/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-GkILnI/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "_wrapSandboxCode (/tmp/tmpgiwbeo7z/lib/program.js:2536:134)",
+              "Kernel._wrapSandboxCode (/tmp/tmpgiwbeo7z/lib/program.js:3148:24)",
+              "ret._ensureSync (/tmp/tmpgiwbeo7z/lib/program.js:2536:107)",
+              "Kernel._ensureSync (/tmp/tmpgiwbeo7z/lib/program.js:3129:28)",
+              "Kernel.invoke (/tmp/tmpgiwbeo7z/lib/program.js:2536:34)",
+              "KernelHost.processRequest (/tmp/tmpgiwbeo7z/lib/program.js:9457:36)",
+              "KernelHost.run (/tmp/tmpgiwbeo7z/lib/program.js:9420:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpgiwbeo7z/lib/program.js:9421:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

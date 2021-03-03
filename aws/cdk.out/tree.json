@@ -1,0 +1,89 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.91.0"
+        }
+      },
+      "aws-batch-poc": {
+        "id": "aws-batch-poc",
+        "path": "aws-batch-poc",
+        "children": {
+          "vpc-d22ed2b9": {
+            "id": "vpc-d22ed2b9",
+            "path": "aws-batch-poc/vpc-d22ed2b9",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+              "aws:cdk:cloudformation:props": {
+                "cidrBlock": "172.31.0.0/16",
+                "vpcId": "vpc-d22ed2b9"
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+              "version": "1.91.0"
+            }
+          },
+          "managed_compute_batch_lusid_poc": {
+            "id": "managed_compute_batch_lusid_poc",
+            "path": "aws-batch-poc/managed_compute_batch_lusid_poc",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Batch::ComputeEnvironment",
+              "aws:cdk:cloudformation:props": {
+                "serviceRole": "managed_compute_batch_lusid_poc_sr",
+                "type": "MANAGED",
+                "computeEnvironmentName": "managed_compute_batch_lusid_poc",
+                "state": "DISABLED"
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-batch.CfnComputeEnvironment",
+              "version": "1.91.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "aws-batch-poc/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "aws-batch-poc/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.91.0"
+                }
+              },
+              "Condition": {
+                "id": "Condition",
+                "path": "aws-batch-poc/CDKMetadata/Condition",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnCondition",
+                  "version": "1.91.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.91.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.91.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.91.0"
+    }
+  }
+}
