@@ -4,7 +4,7 @@ from aws_cdk import (core,
                      aws_iam as iam
                      )
 from typing import Union, TypeVar
-
+from aws_batch_poc.aws_launch_template import CdwLaunchTemplate
 
 class AwsBatchPocStack(core.Stack):
 
@@ -15,13 +15,15 @@ class AwsBatchPocStack(core.Stack):
 
         # subnet_id = ec2.CfnSubnet(self, id='vpc-d22ed2b9', cidr_block='172.31.0.0/16', vpc_id='vpc-d22ed2b9')
         # print(subnet_id)
+        
+        obj_launch_template = CdwLaunchTemplate()
 
         vpc_id = ec2.Vpc.from_lookup(self, id='vpc-d22ed2b9', vpc_id='vpc-d22ed2b9')
 
         print(vpc_id)
         
         iam_sr = iam.Role.from_role_arn(self, id='arn:aws:iam::340444537094:role/POC_LUSID_BATCH_SR', role_arn='arn:aws:iam::340444537094:role/POC_LUSID_BATCH_SR') 
-
+        
         managed_batch_resources = batch.ComputeResources(vpc=vpc_id, allocation_strategy=None, bid_percentage=None,
                                                          compute_resources_tags=None, desiredv_cpus=None,
                                                          ec2_key_pair=None, image=None, instance_role=None,
