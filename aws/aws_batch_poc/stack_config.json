@@ -1,0 +1,12 @@
+{
+    "max_cpus":64,
+    "min_cpus":0,
+    "vpc_id":"vpc-d22ed2b9",
+    "service_role":"arn:aws:iam::340444537094:role/POC_LUSID_BATCH_SR",
+    "stack_name":"managed_compute_batch_lusid_poc",
+    "security_group_name":"sr-lusid-poc-test-d22ed2b9",
+    "security_egress":"sr-gress-d22ed2b9",
+    "security_ingress1":"sr-ingress1-d22ed2b9",
+    "security_ingress2":"sr-ingress2-d22ed2b9",
+    "luanch_template_name":"sample_luach_template_batch"
+}

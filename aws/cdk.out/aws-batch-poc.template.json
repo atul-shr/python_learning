@@ -1,5 +1,70 @@
 {
   "Resources": {
+    "srlusidpoctestd22ed2b9EC15D201": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "sr-lusid-poc-test-d22ed2b9",
+        "GroupName": "sr-lusid-poc-test-d22ed2b9",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "10.166.233.0/24",
+            "Description": "sr-ingress1-d22ed2b9",
+            "FromPort": 22,
+            "IpProtocol": "tcp",
+            "ToPort": 22
+          },
+          {
+            "CidrIp": "10.166.232.0/24",
+            "Description": "sr-ingress2-d22ed2b9",
+            "FromPort": 22,
+            "IpProtocol": "tcp",
+            "ToPort": 22
+          }
+        ],
+        "VpcId": "vpc-d22ed2b9"
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-batch-poc/sr-lusid-poc-test-d22ed2b9/Resource"
+      }
+    },
+    "sampleluachtemplatebatchD0D714AA": {
+      "Type": "AWS::EC2::LaunchTemplate",
+      "Properties": {
+        "LaunchTemplateData": {
+          "TagSpecifications": [
+            {
+              "ResourceType": "instance",
+              "Tags": [
+                {
+                  "Key": "Name",
+                  "Value": "aws-batch-poc/sample_luach_template_batch"
+                }
+              ]
+            },
+            {
+              "ResourceType": "volume",
+              "Tags": [
+                {
+                  "Key": "Name",
+                  "Value": "aws-batch-poc/sample_luach_template_batch"
+                }
+              ]
+            }
+          ]
+        },
+        "LaunchTemplateName": "sample_luach_template_batch"
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-batch-poc/sample_luach_template_batch/Resource"
+      }
+    },
     "managedcomputebatchlusidpocEcsInstanceRoleDFA77143": {
       "Type": "AWS::IAM::Role",
       "Properties": {
@@ -72,6 +137,10 @@
         "ComputeEnvironmentName": "managed_compute_batch_lusid_poc",
         "ComputeResources": {
           "AllocationStrategy": "BEST_FIT",
+          "Ec2KeyPair": "batch-compute",
+          "ImageId": {
+            "Ref": "SsmParameterValueawsserviceecsoptimizedamiamazonlinux2recommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter"
+          },
           "InstanceRole": {
             "Fn::GetAtt": [
               "managedcomputebatchlusidpocInstanceProfile5A385086",
@@ -79,9 +148,11 @@
             ]
           },
           "InstanceTypes": [
-            "optimal"
+            "c5.medium",
+            "r5.medium",
+            "m5.medium"
           ],
-          "MaxvCpus": 256,
+          "MaxvCpus": 64,
           "MinvCpus": 0,
           "SecurityGroupIds": [
             {
@@ -98,7 +169,7 @@
           ],
           "Type": "EC2"
         },
-        "State": "DISABLED"
+        "State": "ENABLED"
       },
       "Metadata": {
         "aws:cdk:path": "aws-batch-poc/managed_compute_batch_lusid_poc/Resource"
@@ -112,6 +183,12 @@
       "Metadata": {
         "aws:cdk:path": "aws-batch-poc/CDKMetadata/Default"
       }
+    }
+  },
+  "Parameters": {
+    "SsmParameterValueawsserviceecsoptimizedamiamazonlinux2recommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter": {
+      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+      "Default": "/aws/service/ecs/optimized-ami/amazon-linux-2/recommended/image_id"
     }
   }
 }
