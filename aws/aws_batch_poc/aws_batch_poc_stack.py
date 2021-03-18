@@ -75,7 +75,7 @@ class AwsBatchPocStack(core.Stack):
 
         obj_launch_template = ec2.LaunchTemplate(self,
                                                  id=cfg_data["luanch_template_name"],
-                                                 block_devices=None,
+                                                 block_devices=obj_block_device,
                                                  cpu_credits=None,
                                                  detailed_monitoring=None,
                                                  disable_api_termination=None,
@@ -88,9 +88,9 @@ class AwsBatchPocStack(core.Stack):
                                                  machine_image=None,
                                                  nitro_enclave_enabled=None,
                                                  role=None,
-                                                 security_group=None,
+                                                 security_group=sec_grp,
                                                  spot_options=None,
-                                                 user_data=None)
+                                                 user_data=obj_user_data)
 
         managed_batch_resources = batch.ComputeResources(vpc=vpc_id,
                                                          allocation_strategy=None,
@@ -105,7 +105,7 @@ class AwsBatchPocStack(core.Stack):
                                                          maxv_cpus=cfg_data["max_cpus"],
                                                          minv_cpus=cfg_data["min_cpus"],
                                                          placement_group=None,
-                                                         security_groups=None,
+                                                         security_groups=sec_grp,
                                                          spot_fleet_role=None,
                                                          type=batch.ComputeResourceType.ON_DEMAND,
                                                          vpc_subnets=None)
