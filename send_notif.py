@@ -18,7 +18,8 @@ def create_parser():
                         help="Date for which appointment to be checked")
     parser.add_argument('--age_grp', dest="age_grp",
                         help="which age group to be checked")
-
+    parser.add_argument('--type', dest="type",
+                        help="type of search")
     return parser
 
 
@@ -36,7 +37,7 @@ def parse_arg():
 
 try:
     logging.basicConfig(
-        format='%(asctime)s:%(levelname)s:%(message)s', level=logging.DEBUG)
+        format='%(asctime)s:%(levelname)s:%(message)s', level=logging.INFO)
     logger = logging.getLogger(__name__)
 except ValueError:
     pass
@@ -74,7 +75,7 @@ def execute_main():
     var_age_limit_45 = 45
     var_age_limit_18 = 18
     counter = 0
-    final_msg = []
+    final_msg = ''
 
     if args.date is None:
         eff_date = now.strftime("%d-%m-%Y")
@@ -86,19 +87,35 @@ def execute_main():
     else:
         var_age_grp = args.age_grp
     # print(type(args.age_grp))
-    appointment_req = pool_conn.request(
-        'GET', configs["main_api_url"] + configs["find_by_districts"], fields={"district_id": bhopal_id, "date": eff_date})
-    appointment_res = json.loads(appointment_req.data.decode('utf-8'))
-    # print(appointment_res)
+    if args.type == "D":
+        appointment_req = pool_conn.request(
+            'GET', configs["main_api_url"] + configs["find_by_districts"], fields={"district_id": bhopal_id, "date": eff_date})
+        appointment_res = json.loads(appointment_req.data.decode('utf-8'))
+        # print(appointment_res)
 
-    for center in appointment_res["sessions"]:
-        # print(center['sessions'])
-        if center['min_age_limit'] == int(var_age_grp):
-            counter += 1
-            print('center name == ' +
-                  center['name'] + ' available_capacity ==' + str(center['available_capacity']))
-            final_msg.append('center name == ' +
-                             center['name'] + ' available_capacity ==' + str(center['available_capacity']))
+        for center in appointment_res["sessions"]:
+            # print(center['sessions'])
+            if center['min_age_limit'] == int(var_age_grp):
+                counter += 1
+                print('center name == ' +
+                      center['name'] + ' available_capacity ==' + str(center['available_capacity']))
+                final_msg += 'center name is ' + center['name'] + ' and available_capacity is ' + str(
+                    center['available_capacity']) + " on " + center['date']
+    else:
+        appointment_req = pool_conn.request(
+            'GET', configs["main_api_url"] + configs["cal_by_districts"], fields={"district_id": bhopal_id, "date": eff_date})
+        appointment_res = json.loads(appointment_req.data.decode('utf-8'))
+        # print(appointment_res)
+
+        for center in appointment_res["centers"]:
+            # print(center['sessions'])
+            for session in center['sessions']:
+                if session['min_age_limit'] == int(var_age_grp) and session['available_capacity'] != 0:
+                    counter += 1
+                    print('center name is ' + center['name'] + ' and available_capacity is ' + str(
+                        session['available_capacity']) + " on " + session['date'])
+                    final_msg += 'center name is ' + center['name'] + ' and available_capacity is ' + str(
+                        session['available_capacity']) + " on " + session['date']
 
     if counter == 0:
         print("No Appointment found for today")
