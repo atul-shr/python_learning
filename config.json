@@ -1,0 +1,9 @@
+{
+    "main_api_url": "https://cdn-api.co-vin.in/api",
+    "states_url": "/v2/admin/location/states",
+    "districts_url": "/v2/admin/location/districts/",
+    "generate_otp_url": "/v2/auth/public/generateOTP",
+    "confirm_otp_url": "/v2/auth/public/confirmOTP",
+    "cal_by_districts": "/v2/appointment/sessions/public/calendarByDistrict",
+    "find_by_districts": "/v2/appointment/sessions/public/findByDistrict"
+}
