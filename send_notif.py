@@ -2,13 +2,23 @@ import json
 import urllib3
 import logging
 import argparse
+from datetime import datetime
+
+now = datetime.now()
+
 
 def create_parser():
     # print("In create arg")
-    parser = argparse.ArgumentParser(description='Get Cowin Appointment Details')
+    parser = argparse.ArgumentParser(
+        description='Get Cowin Appointment Details')
     parser.add_argument('--state_name', dest="state_name", help="State Name")
-    parser.add_argument('--district_name', dest="district_name", help="District Name")
-    parser.add_argument('--date', dest="date", help="Date for which appointment to be checked")
+    parser.add_argument('--district_name',
+                        dest="district_name", help="District Name")
+    parser.add_argument('--date', dest="date",
+                        help="Date for which appointment to be checked")
+    parser.add_argument('--age_grp', dest="age_grp",
+                        help="which age group to be checked")
+
     return parser
 
 
@@ -25,11 +35,11 @@ def parse_arg():
 
 
 try:
-    logging.basicConfig(format='%(asctime)s:%(levelname)s:%(message)s', level=logging.DEBUG)
+    logging.basicConfig(
+        format='%(asctime)s:%(levelname)s:%(message)s', level=logging.DEBUG)
     logger = logging.getLogger(__name__)
 except ValueError:
     pass
-
 
 
 def execute_main():
@@ -60,25 +70,39 @@ def execute_main():
             bhopal_id = districts['district_id']
     print(bhopal_id)
 
-    appointment_req = pool_conn.request(
-        'GET', configs["main_api_url"] + configs["find_by_districts"], fields={"district_id": bhopal_id, "date": "10-05-2021"})
-    appointment_res = json.loads(appointment_req.data.decode('utf-8'))
-    # print(appointment_res)
-
     var_center_name = ''
     var_age_limit_45 = 45
     var_age_limit_18 = 18
     counter = 0
+    final_msg = []
+
+    if args.date is None:
+        eff_date = now.strftime("%d-%m-%Y")
+    else:
+        eff_date = args.date
+
+    if args.age_grp is None:
+        var_age_grp = var_age_limit_18
+    else:
+        var_age_grp = args.age_grp
+    # print(type(args.age_grp))
+    appointment_req = pool_conn.request(
+        'GET', configs["main_api_url"] + configs["find_by_districts"], fields={"district_id": bhopal_id, "date": eff_date})
+    appointment_res = json.loads(appointment_req.data.decode('utf-8'))
+    # print(appointment_res)
 
     for center in appointment_res["sessions"]:
         # print(center['sessions'])
-        if center['min_age_limit'] == var_age_limit_18:
+        if center['min_age_limit'] == int(var_age_grp):
             counter += 1
-            print('center name == ',
-                    center['name'], ' available_capacity ==', center['available_capacity'])
+            print('center name == ' +
+                  center['name'] + ' available_capacity ==' + str(center['available_capacity']))
+            final_msg.append('center name == ' +
+                             center['name'] + ' available_capacity ==' + str(center['available_capacity']))
 
     if counter == 0:
         print("No Appointment found for today")
+
 
 if __name__ == "__main__":
     execute_main()
